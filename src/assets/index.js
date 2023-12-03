@@ -7,6 +7,7 @@ import logo from './logo/logo-black.png';
 import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
+import wavinghand from './personal/wavinghand.png'
 
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
@@ -22,6 +23,7 @@ import menu from './icons/menu.png';
 import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
+import techwriting from './icons/techwriting.jpeg'
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
@@ -49,6 +51,14 @@ import math from './projects/math-magicians.png';
 import movie from './projects/movie-metro.png';
 import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
+import ninetailed from './projects/ninetailed.jpg'
+import refine from './projects/refine.png'
+import sectioneng from './projects/sectioneng.png'
+import logrocket from './projects/logrocket.jpg'
+import stackoverflow from './projects/stackoverflow.png'
+import wolfmart from './projects/wolfmart.png'
+import requestmechanic from './projects/requestmechanic.png'
+import dashboard from './projects/dashboard.png'
 
 export {
   bwmap,
@@ -58,9 +68,11 @@ export {
   logo,
   logotext,
   shaq,
+  wavinghand,
   backend,
   ux,
   frontend,
+  techwriting,
   prototyping,
   github,
   close,
@@ -96,4 +108,12 @@ export {
   dcc,
   kelhel,
   microverse,
+  refine,
+  logrocket,
+  ninetailed,
+  sectioneng,
+  stackoverflow,
+  wolfmart,
+  requestmechanic,
+  dashboard,
 };

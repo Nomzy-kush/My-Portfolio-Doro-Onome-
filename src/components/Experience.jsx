@@ -102,7 +102,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'resume link', //paste the link to your resume here
+                  'https://docs.google.com/document/d/14xlG1dHZieb9GW8KKoYwbtDgr3wr9wK7hNqTqP2AKn8/edit', //the link to my resume here
                   '_blank'
                 )
               }

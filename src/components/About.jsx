@@ -37,12 +37,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+Hey there! 👋 Doro Onome Churchill here, a tech-savvy writer and developer 🖥️ with a knack for captivating storytelling ✍️ and creating outstanding user experiences. From JavaScript wizardry to killer content, I've got you covered. Let's collaborate and bring your tech projects to life! 🌟 Let's collaborate and take your technical content to new heights! Connect with me so I can bring your ideas to life 🤝.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

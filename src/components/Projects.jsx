@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
-import { projects } from '../constants';
+import { projects, articles } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 
 const ProjectCard = ({
@@ -101,7 +101,7 @@ const ProjectCard = ({
                 className="btn-icon sm:w-[34px] sm:h-[34px] 
                   w-[30px] h-[30px] object-contain"
               />
-              LIVE DEMO
+              Live Link
             </button>
           </div>
         </>
@@ -150,6 +150,45 @@ const Projects = () => {
           ))}
         </div>
       </motion.div>
+
+
+      <motion.div variants={textVariant()}>
+      <p className={`${styles.sectionSubText} `}>Professional Writing</p>
+      <h2 className={`${styles.sectionHeadTextLight}`}>Articles.</h2>
+      </motion.div>
+
+      <div className="w-full flex">
+        <motion.p
+          variants={fadeIn('', '', 0.1, 1)}
+          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+          As a professional technical writer, I've authored articles that
+          delve into complex technical topics, providing clear and concise
+          explanations. These articles showcase my ability to communicate
+          intricate concepts, adapt to diverse subject matter, and deliver
+          high-quality content that resonates with the intended audience.
+        </motion.p>
+      </div>
+
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={`${styles.innerWidth} mx-auto flex flex-col`} id='articles'>
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+          {articles.map((article, index) => (
+            <ProjectCard
+              key={article.id}
+              index={index}
+              {...article}
+              active={active}
+              handleClick={setActive}
+            />
+          ))}
+        </div>
+      </motion.div>
+
+
     </div>
   );
 };
