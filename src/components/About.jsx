@@ -37,7 +37,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-Hey there! 👋 Doro Onome Churchill here, a tech-savvy writer and developer 🖥️ with a knack for captivating storytelling ✍️ and creating outstanding user experiences. From JavaScript wizardry to killer content, I've got you covered. Let's collaborate and bring your tech projects to life! 🌟 Let's collaborate and take your technical content to new heights! Connect with me so I can bring your ideas to life 🤝.
+I am a professional with diverse skills, bringing over 3 years of experience in both Technical Writing and Frontend Development. Through specialized training and continuous skill refinement, I excel in simplifying complex technical concepts for clear and accessible communication. Whether crafting actionable documentation for SaaS products or contributing to the creation of better, reusable code bases, I am dedicated to ensuring audience comprehension and delivering exceptional value. Eager to collaborate with your team to drive impactful results.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
