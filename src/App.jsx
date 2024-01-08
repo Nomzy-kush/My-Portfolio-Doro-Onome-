@@ -18,14 +18,6 @@ const App = () => {
           <Hero />
         </div>
 
-        <div className="bg-about bg-cover bg-center bg-no-repeat">
-          <About />
-        </div>
-
-        <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
-          <Tech />
-        </div>
-
         <Projects />
 
         <div
@@ -37,6 +29,15 @@ const App = () => {
             <Experience />
           </div>
         </div>
+
+        <div className="bg-about bg-cover bg-center bg-no-repeat">
+          <About />
+        </div>
+
+        <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
+          <Tech />
+        </div>
+        
         <div className="relative z-0">
           <Contact />
         </div>

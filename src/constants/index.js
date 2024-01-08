@@ -36,7 +36,7 @@ import {
   wolfmart,
   requestmechanic,
   dashboard,
-  
+  openreplay,
 } from '../assets';
 
 export const navLinks = [
@@ -347,4 +347,14 @@ const articles = [
   },
 ];
 
-export { services, technologies, experiences, projects, articles };
+const articles2 = [
+  {
+    id: 'article2-1',
+    name: 'OpenReplay',
+    description: 'Translated technical concepts into accessible business solutions in collaboration with product marketing teams',
+    image: openreplay,
+    demo: 'https://openreplay.com/',
+  },
+]
+
+export { services, technologies, experiences, projects, articles, articles2 };

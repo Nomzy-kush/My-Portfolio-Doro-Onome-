@@ -91,18 +91,22 @@ const Experience = () => {
                 />
               </div>
             }>
+
+
+              <div className='flex flex-col'>
+
+      {/* Frontend Developer Resume  */}
             <button
               className="live-demo flex justify-between 
               sm:text-[18px] text-[14px] text-timberWolf 
               font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
+             gap-1 rounded-[10px] bg-jetLight 
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://docs.google.com/document/d/14xlG1dHZieb9GW8KKoYwbtDgr3wr9wK7hNqTqP2AKn8/edit', //the link to my resume here
+                  'https://docs.google.com/document/d/1oLh4OUnSMzR5MnGu0rxsxnxKgwQr8p_vpXsflhnhEeY/edit?usp=sharing', //the link to my resume here
                   '_blank'
                 )
               }
@@ -116,7 +120,7 @@ const Experience = () => {
                   .querySelector('.download-btn')
                   .setAttribute('src', download);
               }}>
-              MY RESUME
+               RESUME [Frontend Developer]
               <img
                 src={download}
                 alt="download"
@@ -124,6 +128,42 @@ const Experience = () => {
                 w-[23px] h-[23px] object-contain"
               />
             </button>
+
+
+{/* Technical Writing Resume */}
+            <button
+              className="live-demo flex justify-between 
+              sm:text-[18px] text-[14px] text-timberWolf 
+              font-bold font-beckman items-center py-5 pl-3 pr-3 
+             gap-1 rounded-[10px] bg-jetLight 
+              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
+              hover:text-eerieBlack transition duration-[0.2s] 
+              ease-in-out"
+              onClick={() =>
+                window.open(
+                  'https://docs.google.com/document/d/15AWSGNo30JxnLoySWafoJxTpLaBpH-5JZkF2DcBOv3Q/edit?usp=sharing', //the link to my resume here
+                  '_blank'
+                )
+              }
+              onMouseOver={() => {
+                document
+                  .querySelector('.download-btn')
+                  .setAttribute('src', downloadHover);
+              }}
+              onMouseOut={() => {
+                document
+                  .querySelector('.download-btn')
+                  .setAttribute('src', download);
+              }}>
+              RESUME [Technical Writer]
+              <img
+                src={download}
+                alt="download"
+                className="download-btn sm:w-[26px] sm:h-[26px] 
+                w-[23px] h-[23px] object-contain"
+              />
+            </button>
+            </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

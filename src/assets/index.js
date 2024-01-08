@@ -59,6 +59,7 @@ import stackoverflow from './projects/stackoverflow.png'
 import wolfmart from './projects/wolfmart.png'
 import requestmechanic from './projects/requestmechanic.png'
 import dashboard from './projects/dashboard.png'
+import openreplay from './projects/openreplay.png'
 
 export {
   bwmap,
@@ -116,4 +117,5 @@ export {
   wolfmart,
   requestmechanic,
   dashboard,
+  openreplay,
 };
