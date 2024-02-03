@@ -35,8 +35,8 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+        variants={fadeIn('', '', 0.1, 0.5)}
+        className="mt-4 text-onyx text-[18px] max-w-3xl leading-[30px]">
 I am a professional with diverse skills, bringing over 3 years of experience in both Technical Writing and Frontend Development. Through specialized training and continuous skill refinement, I excel in simplifying complex technical concepts for clear and accessible communication. Whether crafting actionable documentation for SaaS products or contributing to the creation of better, reusable code bases, I am dedicated to ensuring audience comprehension and delivering exceptional value. Eager to collaborate with your team to drive impactful results.
       </motion.p>
 

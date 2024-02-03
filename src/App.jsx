@@ -18,6 +18,10 @@ const App = () => {
           <Hero />
         </div>
 
+        <div className="bg-about bg-cover bg-center bg-no-repeat">
+          <About />
+        </div>
+
         <Projects />
 
         <div
@@ -28,10 +32,6 @@ const App = () => {
             bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
             <Experience />
           </div>
-        </div>
-
-        <div className="bg-about bg-cover bg-center bg-no-repeat">
-          <About />
         </div>
 
         <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">

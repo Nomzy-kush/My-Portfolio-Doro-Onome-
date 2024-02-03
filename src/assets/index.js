@@ -9,7 +9,6 @@ import logotext from './logo/logo-text-black.png';
 import shaq from './personal/shaq.png';
 import wavinghand from './personal/wavinghand.png'
 
-import backend from './icons/backend.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
 import prototyping from './icons/prototyping.png';
@@ -23,7 +22,7 @@ import menu from './icons/menu.png';
 import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
-import techwriting from './icons/techwriting.jpeg'
+import techwriter from './icons/techwriter.png'
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
@@ -60,6 +59,7 @@ import wolfmart from './projects/wolfmart.png'
 import requestmechanic from './projects/requestmechanic.png'
 import dashboard from './projects/dashboard.png'
 import openreplay from './projects/openreplay.png'
+import superlativeApes from './projects/superlative-ape.jpeg'
 
 export {
   bwmap,
@@ -70,10 +70,9 @@ export {
   logotext,
   shaq,
   wavinghand,
-  backend,
   ux,
   frontend,
-  techwriting,
+  techwriter,
   prototyping,
   github,
   close,
@@ -118,4 +117,5 @@ export {
   requestmechanic,
   dashboard,
   openreplay,
+  superlativeApes
 };

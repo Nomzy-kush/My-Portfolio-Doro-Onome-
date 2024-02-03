@@ -44,7 +44,7 @@ export default {
       },
       backgroundImage: {
         about:
-          'linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%)',
+          'linear-gradient(165deg, rgba(180, 180, 182, 1) 100%, rgba(80, 80, 80, 1) 100%)',
         experience:
           "linear-gradient(135deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
         experienceLight:

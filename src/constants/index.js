@@ -1,8 +1,7 @@
 import {
   frontend,
-  backend,
   ux,
-  techwriting,
+  techwriter,
   prototyping,
   javascript,
   typescript,
@@ -37,6 +36,7 @@ import {
   requestmechanic,
   dashboard,
   openreplay,
+  superlativeApes,
 } from '../assets';
 
 export const navLinks = [
@@ -61,22 +61,18 @@ export const navLinks = [
 const services = [
   {
     title: 'Technical Writing',
-    icon: techwriting,
+    icon: techwriter,
   },
   {
     title: 'Frontend Developer',
     icon: frontend,
   },
   {
-    title: 'Backend Developer',
-    icon: backend,
-  },
-  {
     title: 'UI/UX Design',
     icon: ux,
   },
   {
-    title: 'Software Prototyping',
+    title: 'Backend Developer',
     icon: prototyping,
   },
 ];
@@ -262,7 +258,7 @@ const projects = [
   {
     id: 'project-4',
     name: 'Web Calculator',
-    description: `A math Calculator built with just HTML5, CSS3 and JavaScript. The app is capable of performing your common math operations like addition, deletion, subtraction, multiplication, and division.`,
+    description: `A math Calculator built with just HTML5, CSS3 and JavaScript that has gathered `,
     tags: [
       {
         name: 'nextjs',
@@ -283,9 +279,9 @@ const projects = [
   },
   {
     id: 'project-5',
-    name: 'Task Manager with React',
+    name: 'Task Manager App',
     description:
-      'A local storage task management application with features that allow users to save tasks that they do not intend to forget. The app also allows users to check the tasks they have completed and the ones they are still yet to finish.',
+      'A local storage task management application with features that allow users to save tasks that they do not intend to forget.',
     tags: [
       {
         name: 'nextjs',
@@ -303,6 +299,29 @@ const projects = [
     image: nyeusi,
     repo: 'https://github.com/Nomzy-kush/Task-Manager-with-React',
     demo: 'https://task-manager-with-react.vercel.app/',
+  },
+  {
+    id: 'project-6',
+    name: 'Superlative Apes',
+    description:
+      'An NFT website project I was experimenting with',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'supabase',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'css',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: superlativeApes,
+    repo: 'https://github.com/Nomzy-kush/Superlative-Apes',
+    demo: 'https://superlative-apes.vercel.app/',
   },
 ];
 
@@ -341,20 +360,17 @@ const articles = [
   {
     id: 'article-5',
     name: 'Ninetailed',
-    description: `Developed comprehensive documentation sets for Ninetailed Tech's cloud-based SaaS products, including user guides, API documentation, developer manuals, and release notes`,
+    description: `Created online documentation for a few of their products and released SEO-frinedly articles.`,
     image: ninetailed,
     demo: 'https://ninetailed.io/',
   },
-];
-
-const articles2 = [
   {
-    id: 'article2-1',
+    id: 'article-6',
     name: 'OpenReplay',
     description: 'Translated technical concepts into accessible business solutions in collaboration with product marketing teams',
     image: openreplay,
     demo: 'https://openreplay.com/',
   },
-]
+];
 
-export { services, technologies, experiences, projects, articles, articles2 };
+export { services, technologies, experiences, projects, articles };
