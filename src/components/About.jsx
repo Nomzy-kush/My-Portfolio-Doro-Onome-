@@ -9,7 +9,7 @@ const ServiceCard = ({ index, title, icon }) => {
   return (
     <motion.div
       variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card">
+      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px]">
       <div
         options={{
           max: 45,
@@ -30,13 +30,13 @@ const About = () => {
   return (
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
+        <p className={styles.aboutText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 0.5)}
-        className="mt-4 text-onyx text-[18px] max-w-3xl leading-[30px]">
+        className="mt-4 text-black-200 text-[18px] max-w-3xl leading-[30px]">
 I am a professional with diverse skills, bringing over 3 years of experience in both Technical Writing and Frontend Development. Through specialized training and continuous skill refinement, I excel in simplifying complex technical concepts for clear and accessible communication. Whether crafting actionable documentation for SaaS products or contributing to the creation of better, reusable code bases, I am dedicated to ensuring audience comprehension and delivering exceptional value. Eager to collaborate with your team to drive impactful results.
       </motion.p>
 

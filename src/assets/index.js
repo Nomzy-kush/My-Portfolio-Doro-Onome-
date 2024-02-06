@@ -60,6 +60,7 @@ import requestmechanic from './projects/requestmechanic.png'
 import dashboard from './projects/dashboard.png'
 import openreplay from './projects/openreplay.png'
 import superlativeApes from './projects/superlative-ape.jpeg'
+import techstudio from './projects/techstudio.jpeg'
 
 export {
   bwmap,
@@ -117,5 +118,6 @@ export {
   requestmechanic,
   dashboard,
   openreplay,
-  superlativeApes
+  superlativeApes,
+  techstudio,
 };

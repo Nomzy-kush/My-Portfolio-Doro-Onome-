@@ -9,7 +9,7 @@ import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 const ProjectCard = ({ id, name, description, image, repo, demo, index }) => {
   return (
     <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+      // variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className={`relative lg:w-[30%] w-[100%] mb-8 md:mb-10 lg:mb-0 flex items-center justify-center min-w-[170px] 
       h-[420px] cursor-pointer card-shadow mt-8`}
     >
@@ -68,14 +68,14 @@ const ProjectCard = ({ id, name, description, image, repo, demo, index }) => {
 const Projects = () => {
   return (
     <div className="-mt-[6rem]">
-      <motion.div variants={textVariant()}>
+      <motion.div>
         <p className={`${styles.sectionSubText} `}>Case Studies</p>
         <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
       </motion.div>
 
       <div className="w-full flex">
         <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
+          // variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
         >
           These projects demonstrate my expertise with practical examples of
@@ -98,14 +98,14 @@ const Projects = () => {
         ))}
       </motion.div>
 
-      <motion.div variants={textVariant()}>
+      <motion.div>
         <p className={`${styles.sectionSubText} `}>Professional Writing</p>
         <h2 className={`${styles.sectionHeadTextLight}`}>Articles.</h2>
       </motion.div>
 
       <div className="w-full flex">
         <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
+          // variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
         >
           As a professional technical writer, I've authored articles that delve

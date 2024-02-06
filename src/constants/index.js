@@ -37,6 +37,7 @@ import {
   dashboard,
   openreplay,
   superlativeApes,
+  techstudio,
 } from '../assets';
 
 export const navLinks = [
@@ -322,6 +323,30 @@ const projects = [
     image: superlativeApes,
     repo: 'https://github.com/Nomzy-kush/Superlative-Apes',
     demo: 'https://superlative-apes.vercel.app/',
+  },
+
+  {
+    id: 'project-7',
+    name: 'Tech Studio Website Clone',
+    description:
+      'Cloned Tech Studio website some time ago',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'supabase',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'css',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: techstudio,
+    repo: 'https://github.com/Nomzy-kush/Tech-Studio-Landing-Page',
+    demo: 'https://65bd2634a08b541b5eab4503--gentle-speculoos-223b5b.netlify.app/',
   },
 ];
 

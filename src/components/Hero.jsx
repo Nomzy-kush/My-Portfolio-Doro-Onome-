@@ -42,13 +42,13 @@ const Hero = () => {
               Hi, I'm{' '}
               <span
                 className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
+                text-night text-[50px] font-mova
                 font-extrabold uppercase">
                 Doro Onome
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Software Developer and <br className="sm:block hidden" />
+            <p className={`${styles.heroSubText} mt-2 text-battleGray sm:text-eerieBlack`}>
+              Software Developer and <br className="sm:block hidden sm:text-battleGray" />
               Technical Writer.
             </p>
           </div>
