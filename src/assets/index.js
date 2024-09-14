@@ -52,7 +52,7 @@ import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
 import ninetailed from './projects/ninetailed.jpg'
 import refine from './projects/refine.png'
-import sectioneng from './projects/sectioneng.png'
+import sectioneng from './projects/sectioneng.jpg'
 import logrocket from './projects/logrocket.jpg'
 import stackoverflow from './projects/stackoverflow.png'
 import wolfmart from './projects/wolfmart.png'
@@ -61,6 +61,8 @@ import dashboard from './projects/dashboard.png'
 import openreplay from './projects/openreplay.png'
 import superlativeApes from './projects/superlative-ape.jpeg'
 import techstudio from './projects/techstudio.jpeg'
+import katsu from './projects/katsu-logo.jpg'
+import talentcode from './projects/talentcode.jpeg'
 
 export {
   bwmap,
@@ -120,4 +122,6 @@ export {
   openreplay,
   superlativeApes,
   techstudio,
+  katsu,
+  talentcode
 };

@@ -35,10 +35,16 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn('', '', 0.1, 0.5)}
-        className="mt-4 text-black-200 text-[18px] max-w-3xl leading-[30px]">
-I am a professional with diverse skills, bringing over 3 years of experience in both Technical Writing and Frontend Development. Through specialized training and continuous skill refinement, I excel in simplifying complex technical concepts for clear and accessible communication. Whether crafting actionable documentation for SaaS products or contributing to the creation of better, reusable code bases, I am dedicated to ensuring audience comprehension and delivering exceptional value. Eager to collaborate with your team to drive impactful results.
-      </motion.p>
+  variants={fadeIn('', '', 0.1, 0.5)}
+  className="mt-4 text-[18px] max-w-3xl leading-[30px] text-black bg-clip-text bg-gradient-to-br from-green-400 via-blue-400 to-black-900 font-bold animate-glow">
+  I am a skilled professional with over 4+ years as a Technical Writer and over 3 years of experience as a professional Frontend Developer. I completed a 2000+ hour coding boot camp to refine my technical skills and have since worked with companies of all sizes to build and maintain clean, reusable codebases.
+
+  Alongside coding, I have a talent for turning complex technical ideas into clear and helpful documentation, including API guides, user manuals, and training materials. My focus is on delivering high-quality work that exceeds customer expectations and drives user engagement.
+
+  I offer my services to companies both locally and internationally, ensuring top-quality results—while getting paid, of course!
+</motion.p>
+
+
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

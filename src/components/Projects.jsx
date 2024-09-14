@@ -70,7 +70,7 @@ const Projects = () => {
     <div className="-mt-[6rem]">
       <motion.div>
         <p className={`${styles.sectionSubText} `}>Case Studies</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadTextLight}`}>My Projects</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -78,11 +78,9 @@ const Projects = () => {
           // variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
         >
-          These projects demonstrate my expertise with practical examples of
-          some of my work, including brief descriptions and links to code
-          repositories and live demos. They showcase my ability to tackle
-          intricate challenges, adapt to various technologies, and efficiently
-          oversee projects.
+          These projects showcase my skills through real examples of my work, including clear descriptions, links to code repositories, and live demos. They highlight my ability to solve complex problems, work with different technologies, and manage projects effectively.
+
+I combine coding with technical writing to create well-documented projects that are easy to understand. Each project is supported by detailed documentation, helping users grasp even the most complex ideas. You can explore live demos and code to see how I turn ideas into successful solutions.
         </motion.p>
       </div>
 
@@ -98,9 +96,9 @@ const Projects = () => {
         ))}
       </motion.div>
 
-      <motion.div>
+      <motion.div className="mt-32">
         <p className={`${styles.sectionSubText} `}>Professional Writing</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>Articles.</h2>
+        <h2 className={`${styles.sectionHeadTextLight}`}>My Technical Content</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -108,17 +106,15 @@ const Projects = () => {
           // variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
         >
-          As a professional technical writer, I've authored articles that delve
-          into complex technical topics, providing clear and concise
-          explanations. These articles showcase my ability to communicate
-          intricate concepts, adapt to diverse subject matter, and deliver
-          high-quality content that resonates with the intended audience.
+          As a skilled Technical Writer with over 4 years of experience, I focus on making complex technical ideas easy to understand. I’ve written many types of content, including API documentation, user guides, training materials, and technical articles. My work has helped companies improve user engagement, meet their content goals, and make their products easier for people to use.
+
+I enjoy breaking down tough concepts into simple language. Whether I’m creating product guides, API docs, or articles, I always aim to produce clear and high-quality content. I work with both local and international companies, delivering valuable results and ensuring I’m fairly compensated for my efforts.
         </motion.p>
       </div>
 
       <motion.div
         variants={staggerContainer}
-        initial="hidden"
+        initial="hidden "
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-wrap justify-between`}
