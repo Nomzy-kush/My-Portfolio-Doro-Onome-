@@ -387,7 +387,7 @@ const articles = [
   {
     id: 'article-2',
     name: 'Talent Code',
-    description: 'Created and  launched various technical courses, including for diverse audiences and children, which received positive internal feedback but lacks performance metrics.',
+    description: 'Created and launched various technical courses, including for diverse audiences and children, which received positive internal feedback but lacks performance metrics.',
     image: talentcode,
     repo: 'https://github.com/Talent-Code-Africa/roadmap/blob/main/CONTRIBUTING.md',
     demo: 'https://talentcodeafrica.com',
