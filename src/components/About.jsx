@@ -4,10 +4,12 @@ import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import aboutMeVideo from '../assets/personal/aboutme.mp4';
+
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <motion.div
+    <div
       variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
       className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px]">
       <div
@@ -22,17 +24,17 @@ const ServiceCard = ({ index, title, icon }) => {
           {title}
         </h3>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const About = () => {
   return (
     <div className="-mt-[6rem]">
-      <motion.div variants={textVariant()}>
+      <div variants={textVariant()}>
         <p className={styles.aboutText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+      </div>
 
       <motion.p
   variants={fadeIn('', '', 0.1, 0.5)}
@@ -44,6 +46,18 @@ const About = () => {
   I offer my services to companies both locally and internationally, ensuring top-quality results—while getting paid, of course!
 </motion.p>
 
+{/* 🎥 Personal Intro Video */}
+<div 
+  variants={fadeIn('left', 'spring', 0.3, 0.75)} 
+  className="mt-10 w-full max-w-2xl"
+>
+  <video 
+    src={aboutMeVideo} 
+    controls 
+    muted={false} 
+    className="w-full h-auto rounded-2xl border border-gray-300 shadow-lg"
+  />
+</div>
 
 
       <div className="mt-20 flex flex-wrap gap-10">
