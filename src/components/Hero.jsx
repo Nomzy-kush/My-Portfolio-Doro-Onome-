@@ -1,145 +1,100 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react';
+import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
+import { bwmap, worldmap, wavinghand } from '../assets';
 import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { shaq, bwmap, worldmap, wavinghand } from '../assets';
-import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa'; // Assuming you have these icons available
-
 
 const Hero = () => {
+  const names = [
+    { text: "Churchill", color: "#06AED5" },
+    { text: "Doro", color: "#01AB6C" },
+    { text: "Onome", color: "#FFD700" },
+  ];
+
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % names.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] });
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 180]);
+
   return (
-    <>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
+    <section
+      ref={ref}
+      className="relative flex flex-col sm:flex-row items-center justify-start h-screen overflow-hidden bg-gradient-to-b from-[#05080f] via-[#0b1120] to-[#111827] pt-24 sm:pt-0"
+    >
+      {/* Background */}
+      <motion.div style={{ rotate }} className="absolute inset-0 z-0 opacity-50">
         <img
           src={bwmap}
-          alt="world map"
-          className="w-full h-full sm:block hidden object-cover"
+          alt="background map"
+          className="w-full h-full object-cover hidden sm:block mix-blend-overlay"
         />
-      </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
           src={worldmap}
-          alt="world map"
-          className="w-full h-full sm:hidden block object-cover"
+          alt="mobile map"
+          className="w-full h-full object-cover sm:hidden mix-blend-overlay"
         />
-      </div>
-      <section
-        className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
-        sm:bg-hero bg-hero-mobile overflow-hidden">
-        <div
-          className={`absolute inset-0 sm:top-[250px] top-[150px] 
-          lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
-          max-w-7xl mx-auto flex flex-row items-start
-          justify-between gap-3`}>
-          <div className="flex flex-col justify-center items-center mt-5 ml-3">
-            <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
-            <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
-          </div>
+        <div className="absolute inset-0 bg-[#0b1120]/80" /> {/* subtle tint overlay */}
+      </motion.div>
 
-          <div>
-          <h1
-  className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}>
-  Hi, I'm{' '}
-  <span
-    className="sm:text-battleGray sm:text-[90px] 
-    text-night text-[50px] font-mova
-    font-extrabold uppercase animate-glow">
-    Doro Onome
-  </span>
-</h1>
+      {/* Waving hand (on small screens it appears first) */}
+      <div className="z-10 flex flex-col items-center justify-center sm:order-2 order-1 mb-6 sm:mb-0 mt-6 sm:mt-0 ml-6 sm:ml-0">
+        <motion.div
+          animate={{ rotate: [0, 15, 0], y: [0, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-40 h-40 sm:w-52 sm:h-52 mb-4"
+        >
+          <img src={wavinghand} alt="Waving Hand" className="w-full h-full" />
+        </motion.div>
 
-
-
-            <p className={`${styles.heroSubText} mt-2 text-battleGray sm:text-eerieBlack`}>
-              Software Developer and <br className="sm:block hidden sm:text-battleGray" />
-              Technical Writer.
-            </p>
-          </div>
-          <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"></div>
-
-          <div></div>
-        </div>
-
-        <div
-          className="xs:bottom-10 bottom-32 w-full 
-          flex justify-center items-center waving-hand-div">
-          <a href="#about">
-            
-          <motion.div
-            animate={{
-              rotate: [0, 90, 0], // Rotation animation for the waving hand
-              y: [0, 24, 0], // Waving animation
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: 'loop',
-            }}
-            className="w-1/2 h-auto"
-          >
-            <img src={wavinghand} alt="Waving Hand" className="w-full h-full waving-hand-image" />
-           
-             {/* Container for icons to orbit around the waving hand */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-row gap-2">
-                {/* GitHub Icon */}
-                <motion.div
-                  animate={{
-                    rotate: [0, 360], // Rotation animation for the icons
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: 'loop',
-                  }}
-                  className="inline-block"
-                >
-                  <a href="https://www.github.com/Nomzy-kush" target="_blank" rel="noopener noreferrer">
-                    <FaGithub size={32} color="#000" />
-                  </a>
-                </motion.div>
-
-                {/* LinkedIn Icon */}
-                <motion.div
-                  animate={{
-                    rotate: [0, 360], // Rotation animation for the icons
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: 'loop',
-                  }}
-                  className="inline-block"
-                >
-                  <a href="https://www.linkedin.com/in/doro-onome-193205208/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin size={32} color="#0077B5" />
-                  </a>
-                </motion.div>
-
-                {/* Medium Icon */}
-                <motion.div
-                  animate={{
-                    rotate: [0, 360], // Rotation animation for the icons
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: 'loop',
-                  }}
-                  className="inline-block"
-                >
-                  <a href="https://www.medium.com/@nomzykush" target="_blank" rel="noopener noreferrer">
-                    <FaMedium size={32} color="#00ab6c" />
-                  </a>
-                </motion.div>
-              </div>
-            </motion.div>
+        {/* Social icons */}
+        <div className="flex gap-5">
+          <a href="https://github.com/Nomzy-kush" target="_blank" rel="noreferrer">
+            <FaGithub size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
+          </a>
+          <a href="https://linkedin.com/in/doro-onome-193205208/" target="_blank" rel="noreferrer">
+            <FaLinkedin size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
+          </a>
+          <a href="https://medium.com/@nomzykush" target="_blank" rel="noreferrer">
+            <FaMedium size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
           </a>
         </div>
+      </div>
 
-      </section>
-    </>
+      {/* Name + subtitle */}
+      <div className="z-10 text-left sm:text-left sm:order-1 order-2 px-6">
+        <h1 className={`${styles.heroHeadText} uppercase`}>
+          Hi, I’m{' '}
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={names[index].text}
+              initial={{ rotateY: 360, opacity: 0 }}
+              animate={{ rotateY: 0, opacity: 1 }}
+              exit={{ rotateY: -360, opacity: 0 }}
+              transition={{ duration: 0.8, ease: 'easeInOut' }}
+              style={{
+                background: `linear-gradient(90deg, ${names[index].color}, white, ${names[index].color})`,
+                WebkitBackgroundClip: 'text',
+                color: 'transparent',
+                textShadow: `0 0 20px ${names[index].color}50`,
+              }}
+              className="font-extrabold text-5xl sm:text-7xl tracking-wide"
+            >
+              {names[index].text}
+            </motion.span>
+          </AnimatePresence>
+        </h1>
+        <p className="text-gray-300 mt-4 text-lg sm:text-xl">
+          Frontend Developer and <span className="text-[#06AED5]">Technical Writer</span>.
+        </p>
+      </div>
+    </section>
   );
 };
 

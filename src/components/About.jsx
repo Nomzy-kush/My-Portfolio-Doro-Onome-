@@ -9,22 +9,36 @@ import aboutMeVideo from '../assets/personal/aboutme.mp4';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <div
+    <motion.div
       variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px]">
+      className="relative xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] group overflow-hidden"
+    >
+      {/* Front content */}
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] 
+                   flex justify-evenly items-center flex-col 
+                   transition-opacity duration-500 group-hover:opacity-0"
+      >
         <img src={icon} alt={title} className="w-16 h-16 object-contain" />
         <h3 className="text-taupe text-[18px] font-bold text-center">
           {title}
         </h3>
       </div>
-    </div>
+
+      {/* Hover content */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileHover={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
+        className="absolute inset-0 flex flex-col items-center justify-center 
+                   bg-gradient-to-br from-[#0177B5] via-[#01AB6C] to-[#000000] 
+                   rounded-[20px]"
+      >
+        <h3 className="text-white text-[22px] font-extrabold uppercase tracking-wider drop-shadow-lg">
+          Expert 😌
+        </h3>
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -36,15 +50,10 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </div>
 
-      <motion.p
-  variants={fadeIn('', '', 0.1, 0.5)}
-  className="mt-4 text-[18px] max-w-3xl leading-[30px] text-black bg-clip-text bg-gradient-to-br from-green-400 via-blue-400 to-black-900 font-bold animate-glow">
-  I am a skilled professional with over 4+ years as a Technical Writer and over 3 years of experience as a professional Frontend Developer. I completed a 2000+ hour coding boot camp to refine my technical skills and have since worked with companies of all sizes to build and maintain clean, reusable codebases.
-
-  Alongside coding, I have a talent for turning complex technical ideas into clear and helpful documentation, including API guides, user manuals, and training materials. My focus is on delivering high-quality work that exceeds customer expectations and drives user engagement.
-
-  I offer my services to companies both locally and internationally, ensuring top-quality results—while getting paid, of course!
+      <motion.p className="mt-4 text-[18px] max-w-3xl leading-[30px] text-gray-800">
+      I began my career as a front-end developer. I found technical writing when an article I wrote went viral. Since then, I have made tutorials, documentation, and support guides in SaaS environments, APIs, and distributed product teams. I am open to jobs in both front-end development and technical writing. I am also learning more about AI Engineering to grow my skills in development, documentation, and intelligent systems.
 </motion.p>
+
 
 {/* 🎥 Personal Intro Video */}
 <div 

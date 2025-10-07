@@ -276,6 +276,83 @@
 
 
 
+@keyframes text-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(1, 119, 181, 0.8),
+                 0 0 10px rgba(1, 171, 108, 0.6),
+                 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(1, 119, 181, 1),
+                 0 0 25px rgba(1, 171, 108, 0.9),
+                 0 0 35px rgba(0, 0, 0, 1);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(1, 119, 181, 0.8),
+                 0 0 10px rgba(1, 171, 108, 0.6),
+                 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.animate-text-glow {
+  animation: text-glow 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%);
+  animation: shimmer 2.2s ease-in-out infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 6s ease infinite;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
 
 
 
