@@ -63,6 +63,8 @@ import superlativeApes from './projects/superlative-ape.jpeg'
 import techstudio from './projects/techstudio.jpeg'
 import katsu from './projects/katsu-logo.jpg'
 import talentcode from './projects/talentcode.jpeg'
+import tiedy from './icons/tiedy.png'
+import tekkyguide from './icons/tekkyguide.jpeg'
 
 export {
   bwmap,
@@ -123,5 +125,7 @@ export {
   superlativeApes,
   techstudio,
   katsu,
-  talentcode
+  talentcode,
+  tiedy,
+  tekkyguide
 };

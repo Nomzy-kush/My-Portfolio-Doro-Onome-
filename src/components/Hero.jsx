@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative flex flex-col sm:flex-row items-center justify-start h-screen overflow-hidden bg-gradient-to-b from-[#05080f] via-[#0b1120] to-[#111827] pt-24 sm:pt-0"
+      className="relative flex flex-col sm:flex-row items-center justify-center h-screen overflow-hidden bg-gradient-to-b from-[#05080f] via-[#0b1120] to-[#111827] pt-24 sm:pt-0"
     >
       {/* Background */}
       <motion.div style={{ rotate }} className="absolute inset-0 z-0 opacity-50">

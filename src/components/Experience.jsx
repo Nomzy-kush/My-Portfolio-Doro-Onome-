@@ -103,7 +103,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://docs.google.com/document/d/1oLh4OUnSMzR5MnGu0rxsxnxKgwQr8p_vpXsflhnhEeY/edit?usp=sharing', //the link to my resume here
+                  'https://docs.google.com/document/d/1qe4jfJ4xkROQoYadVbeeWD-xucwyjmbeWenyyfo0acA/edit?usp=sharing',
                   '_blank'
                 )
               }
@@ -138,7 +138,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://docs.google.com/document/d/15AWSGNo30JxnLoySWafoJxTpLaBpH-5JZkF2DcBOv3Q/edit?usp=sharing', //the link to my resume here
+                  'https://docs.google.com/document/d/1zxu7HwK2K3kO6LZrLt5eqCv6m7ol1sOo/edit?usp=sharing&ouid=106160686367420651163&rtpof=true&sd=true', //the link to my resume here
                   '_blank'
                 )
               }

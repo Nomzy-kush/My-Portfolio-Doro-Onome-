@@ -39,7 +39,9 @@ import {
   superlativeApes,
   techstudio,
   katsu,
-  talentcode
+  talentcode,
+  tiedy,
+  tekkyguide
 } from '../assets';
 
 export const navLinks = [
@@ -129,42 +131,56 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Postman Documentation Engineer',
+    title: 'Frontend Developer',
+    company_name: 'Tidey',
+    icon: tiedy,
+    iconBg: '#ffffff',
+    date: 'May 2025 - August 2025',
+  },
+  {
+    title: 'Senior Documentation Engineer & Senior Technical Writer',
     company_name: 'Sabi',
     icon: katsu,
     iconBg: '#ffffff',
-    date: 'February 2024 - Present',
+    date: 'February 2024 – April 2025',
   },
   {
-    title: 'Lead Frontend Developer',
+    title: 'Lead Frontend Developer & Senior Documentation Engineer',
     company_name: 'RequestMechanic',
     icon: requestmechanic,
     iconBg: '#333333',
-    date: 'March 2023 - Current',
+    date: 'May 2023 – February 2025',
   },
   {
-    title: 'Technical Author',
+    title: 'Technical Author & Content Developer',
     company_name: 'Talent Code',
     icon: talentcode,
     iconBg: '#fff',
     date: 'December 2023 - April 2024',
   },
   {
-    title: 'Technical Writer',
+    title: 'SEO Content Writer & Technical Writer',
     company_name: 'OpenReplay',
     icon: openreplay,
     iconBg: '#fff',
     date: 'December 2022 - July 2023',
   },
   {
-    title: 'Technical Writer',
+    title: 'Content Strategist & Technical Writer',
     company_name: 'Ninetailed',
     icon: ninetailed,
     iconBg: '#fff',
     date: 'September 2022 - February 2023',
   },
   {
-    title: 'Technical Writer',
+    title: 'Frontend Developer',
+    company_name: 'Tekky Guide',
+    icon: tekkyguide,
+    iconBg: '#fff',
+    date: 'February 2022 - February 2023',
+  },
+  {
+    title: ' SEO Content Writer/Editor',
     company_name: 'Refine Dev',
     icon: refine,
     iconBg: '#1c2c31',
@@ -178,22 +194,22 @@ const experiences = [
     date: ' February 2021 - December 2021',
   },
   {
-    title: 'Technical Writer',
+    title: ' SEO Content Writer',
     company_name: 'Stack Overflow',
     icon: stackoverflow,
     iconBg: '#fff',
     date: 'February 2021 - February 2022',
   },
   {
-    title: 'Technical Writer',
+    title: 'SEO Content Writer/Editor',
     company_name: 'LogRocket',
     icon: logrocket,
     iconBg: '#7152a1',
     date: ' September 2020 - March 2022',
   },
   {
-    title: 'Technical Writer',
-    company_name: 'Cloudzilla.ai',
+    title: 'SEO Content Writer/Editor',
+    company_name: 'Section Engineering Education',
     icon: sectioneng,
     iconBg: '#000000',
     date: 'February 2020 - April 2022',
@@ -211,7 +227,7 @@ const projects = [
       { name: 'firebase', color: 'orange-text-gradient' },
       { name: 'tailwind', color: 'pink-text-gradient' },
     ],
-    image: 'komikult', // replace with actual import if available
+    image: 'komikult',
     repo: 'https://github.com/RequestMechanic/Web-Landing-Page',
     demo: 'https://requestmechanic.com/',
     problem:
@@ -232,11 +248,10 @@ const projects = [
       { name: 'tailwind', color: 'pink-text-gradient' },
       { name: 'css', color: 'orange-text-gradient' },
     ],
-    image: 'tidey', // replace with actual import
+    image: 'tidey',
     repo: 'https://github.com/Nomzy-kush/Tidey-Web-Landing-Page',
-    demo: 'https://tidey.vercel.app/', // update if live link differs
-    problem:
-      'Local laundry services lacked a simple digital solution for customers to book and track their laundry services online.',
+    demo: 'https://tidey-indol.vercel.app/',
+    problem: 'Local laundry services lacked a simple digital solution for customers to book and track their laundry services online.',
     action:
       'Developed a lightweight landing page showcasing Tidey’s pickup and delivery process with clear CTAs and mobile optimization.',
     result:
@@ -252,9 +267,9 @@ const projects = [
       { name: 'react', color: 'blue-text-gradient' },
       { name: 'tailwind', color: 'pink-text-gradient' },
     ],
-    image: 'tekkyguide', // replace with actual import
+    image: 'tekkyguide',
     repo: 'https://github.com/Nomzy-kush/Tekky-Guide-Landing-Page',
-    demo: 'https://tekkyguide.vercel.app/', // update if different
+    demo: 'https://tekky-guide-landing-page-uqun.vercel.app/',
     problem:
       'New developers struggled with fragmented learning paths and unreliable mentorship resources.',
     action:
@@ -273,9 +288,9 @@ const projects = [
       { name: 'css', color: 'pink-text-gradient' },
       { name: 'python', color: 'green-text-gradient' },
     ],
-    image: 'wolfmart', // replace with actual import
+    image: 'wolfmart',
     repo: 'https://github.com/Nomzy-kush/Wolfmart-site',
-    demo: 'https://wolfmart.vercel.app/', // update if available
+    demo: 'https://wolfmart-site.vercel.app/',
     problem:
       'Agricultural sellers had limited access to online tools for reaching verified buyers and scaling their businesses.',
     action:
@@ -295,7 +310,7 @@ const projects = [
       { name: 'tailwind', color: 'pink-text-gradient' },
       { name: 'framer-motion', color: 'orange-text-gradient' },
     ],
-    image: 'portfolio', // replace with actual import
+    image: 'portfolio',
     repo: 'https://github.com/Nomzy-kush/portfolio',
     demo: 'https://fanciful-sunflower-9e1ca3.netlify.app/',
     problem:
@@ -305,48 +320,6 @@ const projects = [
     result:
       'Improved personal branding and visibility, resulting in more client inquiries and freelance opportunities.',
     tech: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
-  },
-  {
-    id: 'project-6',
-    name: 'Google Contacts Clone',
-    description:
-      'A React-based clone of Google Contacts with CRUD functionality and an intuitive contact management interface.',
-    tags: [
-      { name: 'react', color: 'blue-text-gradient' },
-      { name: 'tailwind', color: 'pink-text-gradient' },
-      { name: 'firebase', color: 'orange-text-gradient' },
-    ],
-    image: 'googlecontacts', // replace with actual import
-    repo: 'https://github.com/Nomzy-kush/Google-Contacts-Clone',
-    demo: 'https://google-contacts-clone.vercel.app/', // update if deployed
-    problem:
-      'Wanted to replicate a real-world application interface with modern CRUD features and data persistence.',
-    action:
-      'Built a functional contact management system using React and Firebase for storing and editing contact data, styled with Tailwind CSS.',
-    result:
-      'Delivered a high-performing app that mimics Google’s UI/UX, improving my understanding of scalable React component design.',
-    tech: ['React', 'Firebase', 'Tailwind CSS'],
-  },
-  {
-    id: 'project-7',
-    name: 'Task Manager App',
-    description:
-      'A local storage-based task management app that helps users create, update, and delete daily tasks with ease.',
-    tags: [
-      { name: 'react', color: 'blue-text-gradient' },
-      { name: 'css', color: 'pink-text-gradient' },
-      { name: 'javascript', color: 'orange-text-gradient' },
-    ],
-    image: 'taskmanager', // replace with actual import
-    repo: 'https://github.com/Nomzy-kush/Task-Manager-with-React',
-    demo: 'https://task-manager-with-react.vercel.app/',
-    problem:
-      'Users needed a lightweight tool to manage personal tasks without cloud dependencies.',
-    action:
-      'Developed a simple, responsive to-do application using React and local storage for persistent task management.',
-    result:
-      'Increased productivity for users and demonstrated strong state management and component structuring skills.',
-    tech: ['React', 'CSS', 'JavaScript'],
   },
 ];
 
@@ -358,8 +331,8 @@ const articles = [
     name: 'Request Mechanic Docs (Platform + API)',
     description:
       'Comprehensive documentation suite for Request Mechanic’s platform and APIs, improving onboarding and partner integrations.',
-    image: 'sabi', // replace with actual import
-    repo: 'https://github.com/RequestMechanic/Web-Landing-Page',
+    image: 'sabi',
+    repo: 'https://requestmechanic.gitbook.io/request-mechanic-api-documentation',
     demo: 'https://requestmechanic.gitbook.io/requestmechanic-docs',
     problem:
       'Users and partners struggled to understand how to onboard and integrate with Request Mechanic’s platform and APIs.',
@@ -374,13 +347,13 @@ const articles = [
     name: 'Sabi (Trace Onboarding + Listing Guides)',
     description:
       'Developed clear, step-by-step documentation for Sabi’s Trace platform to guide users through setup and product listings.',
-    image: 'katsu', // replace with actual import
-    repo: 'https://github.com/spacesio-org/sabi-api-docs',
+    image: 'katsu',
+    repo: 'https://documentation.sabi.am/',
     demo: 'https://documentation.sabi.am/docs/trace_onboarding_guide_for_buyers_and_sellers',
     problem:
       'Buyers and sellers found onboarding and product listing on the Trace platform complex and time-consuming.',
     action:
-      'Authored beginner-friendly guides explaining registration, navigation, and product setup using Docusaurus.',
+      'Authored product guides explaining registration, navigation, and product setup using Docusaurus.',
     result:
       'Increased documentation engagement by 35% and improved product listing accuracy across new vendor accounts.',
     tech: ['Docusaurus', 'Markdown', 'UX Writing'],
@@ -391,7 +364,7 @@ const articles = [
     description:
       'Authored frontend engineering tutorials for the Refine framework, focusing on developer experience and performance.',
     image: 'refine',
-    repo: 'https://github.com/RefineDevelopment/Documentation',
+    repo: 'https://github.com/Nomzy-kush/refine',
     demo: 'https://refine.dev/blog/author/doro_onome/',
     problem:
       'Developers using Refine lacked practical, UI-focused tutorials demonstrating how to build with the framework effectively.',
@@ -415,69 +388,6 @@ const articles = [
     result:
       'Built a dedicated readership base and positioned my writing as a trusted resource in the developer community.',
     tech: ['Markdown', 'Web3', 'DevOps', 'AI Systems'],
-  },
-  {
-    id: 'article-5',
-    name: 'Talent Code Africa',
-    description:
-      'Created technical course materials and internal documentation for a learning platform teaching children and adults coding skills.',
-    image: 'talentcode',
-    repo: 'https://github.com/Talent-Code-Africa/roadmap/blob/main/CONTRIBUTING.md',
-    demo: 'https://talentcodeafrica.com',
-    problem:
-      'The platform lacked structured, engaging content tailored for beginners and younger audiences.',
-    action:
-      'Designed course outlines, tutorials, and contributing guides that simplified complex programming concepts.',
-    result:
-      'Enhanced course completion rates and received positive feedback from educators and learners alike.',
-    tech: ['Curriculum Design', 'Markdown', 'HTML'],
-  },
-  {
-    id: 'article-6',
-    name: 'OpenReplay Blog',
-    description:
-      'Collaborated with OpenReplay’s product marketing team to translate technical topics into user-friendly articles.',
-    image: 'openreplay',
-    repo: 'https://github.com/openreplay/documentation',
-    demo: 'https://blog.openreplay.com/#',
-    problem:
-      'Developers and decision-makers struggled to understand the business value behind OpenReplay’s technical features.',
-    action:
-      'Produced content that bridged technical depth with product storytelling, aligning with marketing and dev-rel goals.',
-    result:
-      'Improved article engagement and contributed to higher awareness of OpenReplay’s product capabilities.',
-    tech: ['Technical Writing', 'Product Marketing', 'JavaScript'],
-  },
-  {
-    id: 'article-7',
-    name: 'LogRocket Blog',
-    description:
-      'Published numerous developer-focused tutorials and articles tailored to LogRocket’s global audience.',
-    image: 'logrocket',
-    repo: 'https://github.com/LogRocket',
-    demo: 'https://blog.logrocket.com/author/doroonome/',
-    problem:
-      'Developers sought real-world, implementation-focused guides for React, DevOps, and web development trends.',
-    action:
-      'Wrote SEO-friendly, research-backed tutorials simplifying advanced frontend and DevOps concepts.',
-    result:
-      'Contributed to LogRocket’s blog growth, with multiple articles gaining thousands of reads and backlinks.',
-    tech: ['React', 'SEO Writing', 'DevOps'],
-  },
-  {
-    id: 'article-8',
-    name: 'Section Engineering Education',
-    description:
-      'Contributed seven project-based JavaScript tutorials for Section Engineering Education’s global learning platform.',
-    image: 'sectioneng',
-    demo: 'https://www.cloudzilla.ai/dev-education/author/doro-onome/',
-    problem:
-      'Students lacked accessible, project-oriented content for mastering JavaScript fundamentals.',
-    action:
-      'Authored step-by-step guides with practical coding examples reviewed by technical editors and peer contributors.',
-    result:
-      'Achieved over 200,000 page views and improved learner retention rates on the platform.',
-    tech: ['JavaScript', 'Markdown', 'Educational Writing'],
   },
 ];
 
