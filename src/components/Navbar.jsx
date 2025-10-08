@@ -71,13 +71,13 @@ const Navbar = () => {
             alt="Profile"
             className="w-[55px] h-[55px] rounded-full object-cover border-2 border-[#06AED5] shadow-md hover:shadow-lg transition-all"
           />
-          <span className="text-eerieBlack font-bold text-2xl font-poppins tracking-wide">
+          <span className="text-eerieBlack font-medium font-mova uppercase text-2xl  tracking-wide">
             Churchill Doro
           </span>
         </Link>
 
         {/* 🖥️ Desktop Menu */}
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
+        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2 ">
           {navLinks.map((nav) => {
             const isActive =
               (location.pathname === "/blog" && nav.id === "blog") ||

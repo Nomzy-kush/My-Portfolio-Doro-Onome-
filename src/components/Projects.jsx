@@ -18,7 +18,7 @@ const Projects = () => {
           </motion.div>
 
           <div className="w-full flex">
-            <motion.p className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+            <motion.p className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] font-medium font-mova">
               These projects showcase my skills through real examples of my work, including clear
               descriptions, links to code repositories, and live demos. They highlight my ability to
               solve complex problems, work with different technologies, and manage projects effectively.
@@ -48,7 +48,7 @@ const Projects = () => {
             <h2 className={`${styles.sectionHeadTextLight}`}>My Publications</h2>
           </motion.div>
 
-          <motion.p className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+          <motion.p className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] font-medium font-mova">
             As a skilled Technical Writer with over 4 years of experience, I focus on making complex
             technical ideas easy to understand. I’ve written many types of content, including API
             documentation, user guides, training materials, and technical articles.
@@ -70,7 +70,7 @@ const Projects = () => {
           <div className="text-center mt-10">
             <Link
               to="/blog"
-              className="text-[#06AED5] hover:text-[#048bad] font-semibold text-lg"
+              className="text-[#06AED5] hover:text-[#048bad] font-medium font-mova text-lg"
             >
               Check out my Blog 👉
             </Link>

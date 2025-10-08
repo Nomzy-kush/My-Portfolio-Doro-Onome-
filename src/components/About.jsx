@@ -20,7 +20,7 @@ const ServiceCard = ({ index, title, icon }) => {
                    transition-opacity duration-500 group-hover:opacity-0"
       >
         <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-taupe text-[18px] font-bold text-center">
+        <h3 className="text-taupe text-[18px] font-bold font-mova text-center">
           {title}
         </h3>
       </div>
@@ -34,7 +34,7 @@ const ServiceCard = ({ index, title, icon }) => {
                    bg-gradient-to-br from-[#0177B5] via-[#01AB6C] to-[#000000] 
                    rounded-[20px]"
       >
-        <h3 className="text-white text-[22px] font-extrabold uppercase tracking-wider drop-shadow-lg">
+        <h3 className="text-white text-[22px] font-bold font-mova uppercase tracking-wider drop-shadow-lg">
           Expert 😌
         </h3>
       </motion.div>
@@ -50,7 +50,7 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </div>
 
-      <motion.p className="mt-4 text-[18px] max-w-3xl leading-[30px] text-gray-800">
+      <motion.p className="mt-4 text-[18px] max-w-3xl leading-[30px] text-gray-800 font-medium font-mova">
       I began my career as a front-end developer. I found technical writing when an article I wrote went viral. Since then, I have made tutorials, documentation, and support guides in SaaS environments, APIs, and distributed product teams. I am open to jobs in both front-end development and technical writing. I am also learning more about AI Engineering to grow my skills in development, documentation, and intelligent systems.
 </motion.p>
 

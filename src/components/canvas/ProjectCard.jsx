@@ -43,30 +43,30 @@ const ProjectCard = ({
       {/* Card Content */}
       <div className="relative bg-[#0b1120]/95 backdrop-blur-sm p-6 rounded-2xl h-full flex flex-col justify-between shadow-[0_0_20px_rgba(0,0,0,0.4)] group-hover:shadow-[0_0_25px_rgba(6,174,213,0.3)] transition-all duration-500">
         <div>
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-[#06AED5] to-[#067B9C] bg-clip-text text-transparent mb-3">
+          <h3 className="text-2xl font-bold font-mova bg-gradient-to-r from-[#06AED5] to-[#067B9C] bg-clip-text text-transparent mb-3">
             {name}
           </h3>
-          <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+          <p className="text-gray-300 mb-4 text-sm leading-relaxed font-medium font-mova">
             {description}
           </p>
 
           {/* Problem / Action / Result */}
-          <div className="text-gray-400 space-y-2 text-sm mb-5">
+          <div className="text-gray-400 space-y-2 text-sm mb-5 font-medium font-mova">
             {problem && (
               <p>
-                <span className="font-semibold text-[#06AED5]">Problem:</span>{" "}
+                <span className="font-medium font-mova text-[#06AED5]">Problem:</span>{" "}
                 {problem}
               </p>
             )}
             {action && (
               <p>
-                <span className="font-semibold text-[#06AED5]">Action:</span>{" "}
+                <span className="font-medium font-mova text-[#06AED5]">Action:</span>{" "}
                 {action}
               </p>
             )}
             {result && (
               <p>
-                <span className="font-semibold text-[#06AED5]">Result:</span>{" "}
+                <span className="font-medium font-mova text-[#06AED5]">Result:</span>{" "}
                 {result}
               </p>
             )}
@@ -75,8 +75,8 @@ const ProjectCard = ({
 
         {/* Tech stack */}
         <div>
-          <p className="text-gray-400 text-xs font-medium mb-2">
-            <span className="text-[#06AED5] font-semibold">Tech Stack:</span>{" "}
+          <p className="text-gray-400 text-xs font-medium font-mova mb-2">
+            <span className="text-[#06AED5] font-semibold font-medium font-mova">Tech Stack:</span>{" "}
             {tags.map((t) => t.name).join(", ")}
           </p>
 
@@ -95,7 +95,7 @@ const ProjectCard = ({
               href={repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm bg-[#06AED5]/10 hover:bg-[#06AED5]/20 px-3 py-2 rounded-lg text-[#06AED5] transition-all duration-200"
+              className="flex items-center gap-2 text-sm bg-[#06AED5]/10 hover:bg-[#06AED5]/20 px-3 py-2 rounded-lg text-[#06AED5] transition-all duration-200 font-medium font-mova"
             >
               <FaGithub /> Code
             </a>
@@ -103,7 +103,7 @@ const ProjectCard = ({
               href={demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm bg-[#06AED5]/10 hover:bg-[#06AED5]/20 px-3 py-2 rounded-lg text-[#06AED5] transition-all duration-200"
+              className="flex items-center gap-2 text-sm bg-[#06AED5]/10 hover:bg-[#06AED5]/20 px-3 py-2 rounded-lg text-[#06AED5] transition-all duration-200 font-medium font-mova"
             >
               <FaExternalLinkAlt /> Live
             </a>

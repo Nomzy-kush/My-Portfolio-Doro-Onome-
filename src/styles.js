@@ -18,20 +18,20 @@ const styles = {
   padding: 'sm:px-16 px-6 sm:py-16 py-10',
 
   heroHeadText:
-    'font-black text-white text-left lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[80px] mt-2',
+    'font-medium font-mova uppercase text-white text-left lg:text-[70px] sm:text-[50px] xs:text-[40px] text-[30px] lg:leading-[80px] mt-2',
   heroSubText:
-    'text-eerieBlack font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]',
+    'text-eerieBlack font-medium font-mova lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]',
 
   sectionHeadText:
-    'text-eerieBlack font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins text-transparent bg-clip-text bg-gradient-to-r from-[#0177B5] via-[#01AB6C] to-[#000000]',
+    'text-eerieBlack font-medium font-mova uppercase md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins text-transparent bg-clip-text bg-gradient-to-r from-[#0177B5] via-[#01AB6C] to-[#000000]',
   sectionHeadTextLight:
-    'text-timberWolf font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins text-transparent bg-clip-text bg-gradient-to-r from-[#0177B5] via-[#01AB6C] to-[#000000]',
+    'text-timberWolf font-medium font-mova uppercase md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins text-transparent bg-clip-text bg-gradient-to-r from-[#0177B5] via-[#01AB6C] to-[#000000]',
   sectionSubText:
-    'sm:text-[18px] text-xl text-taupe uppercase tracking-wider font-semibold font-poppins',
+    'sm:text-[18px] text-xl text-taupe uppercase tracking-wider font-medium font-mova',
   sectionSubTextLight:
-    'sm:text-[18px] text-xl text-taupe uppercase tracking-wider font-semibold font-poppins',
+    'sm:text-[18px] text-xl text-taupe uppercase tracking-wider font-medium font-mova',
     aboutText:
-    'sm:text-[18px] text-[16px] text-eerieBlack uppercase tracking-wider bold font-poppins',
+    'sm:text-[18px] text-[16px] text-eerieBlack uppercase tracking-wider bold font-medium font-mova',
 };
 
 export { styles };

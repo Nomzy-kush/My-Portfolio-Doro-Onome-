@@ -90,7 +90,7 @@ const Hero = () => {
             </motion.span>
           </AnimatePresence>
         </h1>
-        <p className="text-gray-300 mt-4 text-lg sm:text-xl">
+        <p className="text-gray-300 mt-4 text-lg sm:text-xl font-medium font-mova">
           Frontend Developer and <span className="text-[#06AED5]">Technical Writer</span>.
         </p>
       </div>

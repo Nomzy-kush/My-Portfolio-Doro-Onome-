@@ -85,10 +85,10 @@ export default function Blog() {
       id="blog"
     >
       <header className="mb-6">
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-[#06AED5] to-[#067B9C] bg-clip-text text-transparent">
+        <h1 className="text-3xl font-bold font-mova bg-gradient-to-r from-[#06AED5] to-[#067B9C] bg-clip-text text-transparent">
           Blog & Publications
         </h1>
-        <p className="text-gray-400 mt-2">
+        <p className="text-gray-400 mt-2 font-medium font-mova">
           Read and enjoy 😉
         </p>
       </header>
@@ -103,8 +103,8 @@ export default function Blog() {
               onClick={() => setActiveTag(t)} // ✅ renamed correctly
               className={`px-3 py-1 rounded-full text-sm transition-colors duration-200 ${
                 activeTag === t
-                  ? "bg-[#06AED5] text-black"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  ? "bg-[#06AED5] text-black font-medium font-mova"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium font-mova"
               }`}
             >
               {t}
@@ -122,7 +122,7 @@ export default function Blog() {
           <SkeletonCard />
         </div>
       ) : filtered.length > 0 ? (
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 font-medium font-mova">
           {filtered.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
