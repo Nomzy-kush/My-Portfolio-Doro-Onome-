@@ -1,13 +1,15 @@
-> Tailwind CSS is a popular and versatile CSS framework developers use worldwide to build amazing user interfaces. While many developers are familiar with the commonly used Tailwind utilities, there are many more under the hood that are not as well known. This article will explore some of these lesser-known Tailwind CSS utilities that you may not have heard of, but are sure to make your development process easier and more efficient.
+> 
+![](https://miro.medium.com/v2/resize:fit:1400/1*UAGfJ0Oqzcc-bfCJY-QWoA.png)
+Tailwind CSS is a popular and versatile CSS framework developers use worldwide to build amazing user interfaces. While many developers are familiar with the commonly used Tailwind utilities, there are many more under the hood that are not as well known. This article will explore some of these lesser-known Tailwind CSS utilities that you may not have heard of, but are sure to make your development process easier and more efficient.
 
 From text transformation utilities to margin and padding helpers, this article will cover a range of [Tailwind CSS](https://tailwindcss.com/) utilities that are often overlooked. We'll also look at some unique and creative ways in which these utilities can be used to build engaging and effective user interfaces.
 
-Exploring the New Tailwind CSS Utilities
+## Exploring the New Tailwind CSS Utilities
 ----------------------------------------
 
 Tailwind CSS recently released new utilities to make styling and layout easier for developers. These utilities include the `apply` utility, `extend` utility, `responsive` utility, and `variants` utility. Each utility serves a unique purpose and can be combined to create powerful styles with minimal effort.
 
-The `apply` utility
+### The `apply` utility
 -------------------
 
 The `apply` utility in Tailwind CSS is used to quickly apply a set of pre-defined utility classes to a given element. This allows for easy and efficient styling without having to write custom CSS.
@@ -51,7 +53,7 @@ Press enter or click to view image in full size
 
 Overall, the `apply` utility in Tailwind CSS is a versatile and useful tool that can help you to write cleaner and more concise styles. Whether you're working with responsive styles, custom classes, or utility classes, the `apply` utility is a great way to streamline your code and make your styles easier to maintain.
 
-The `extend` utility
+### The `extend` utility
 --------------------
 
 The `@extend` utility in Tailwind CSS allows you to extend (inherit) the styles of one class into another. This can be useful when you want to reuse styles across multiple classes without having to rewrite them.
@@ -80,7 +82,7 @@ In the above example, the `.extend-text-red-500` class extends the `.text-red
 
 The extend utility is a powerful tool for keeping your styles organized and maintaining a clean, concise codebase. By using it in combination with other Tailwind CSS utility classes, you can quickly and easily create complex, custom styles for your projects.
 
-The responsive utility
+### The responsive utility
 ----------------------
 
 The `@responsive` utility in Tailwind CSS allows you to apply different styles based on screen sizes. The basic syntax for the `@responsive` utility is as follows:
@@ -139,7 +141,7 @@ Press enter or click to view image in full size
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*DwAvhGd_GlyYL9MB.gif)
 
-`variant` utility
+### `variant` utility
 -----------------
 
 The `@variant` utility in Tailwind CSS is a way to extend and customize the pre-defined design styles that come with the framework. It allows you to add new styles to existing utility classes or create new ones.
@@ -180,12 +182,12 @@ This is just one example of utilizing the `@variant` utility. You can also use
 
 These variations can be combined and customized to meet the specific design needs of a project.
 
-Use cases for the `@apply` utility:
+## Use cases for the `@apply` utility:
 -----------------------------------
 
 Here are some use cases for the `@apply` utility in a web application:
 
-1\. Creating reusable UI components
+### 1\. Creating reusable UI components
 -----------------------------------
 
 The `@apply` utility makes it easy to create reusable UI components with consistent styling. For example, you could define a `button` style like this:
@@ -198,7 +200,7 @@ This creates a button with `padding`, rounded corners, bold text, and blue `ba
 
 ![](https://miro.medium.com/v2/resize:fit:434/0*Onergp1ILWdXjyz0.gif)
 
-2\. Simplifying responsive design
+### 2\. Simplifying responsive design
 ---------------------------------
 
 Responsive design is a crucial aspect of web development, and Tailwind makes it easy with its responsive utilities. However, applying responsive styles can become repetitive and error-prone. The `@apply` utility simplifies this process by allowing developers to define responsive styles in a single class.
@@ -215,12 +217,12 @@ Press enter or click to view image in full size
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*TmhqAFZ7tYfIKjj2.gif)
 
-Use cases for the `@extend` utility
+## Use cases for the `@extend` utility
 -----------------------------------
 
 Here are some use cases for the `@extend` utility in a web application:
 
-1\. Reusing styles for variants of a component
+### 1\. Reusing styles for variants of a component
 ----------------------------------------------
 
 Reusing styles for component variants is one of the most common use cases for the `@extend` utility in web applications. For example, you may want to use the same button component in different contexts but with slightly different styles. Instead of duplicating the styles for each variant, you can create a base class and then extend it to create each variant using the `@extend` utility.
@@ -233,7 +235,7 @@ In the example above, the `base-button` class includes the common styles for a
 
 ![](https://miro.medium.com/v2/resize:fit:1024/0*FcqXTx0NE2OYLkLR.png)
 
-2\. Creating Utility classes
+### 2\. Creating Utility classes
 ----------------------------
 
 Another use case for the @extend utility is the creation of utility classes that can be used to style elements quickly. Utility classes are frequently used to apply one-time styles that do not warrant the development of a new component or complex styling rule.
@@ -246,7 +248,7 @@ The @extend utility is used in this example to create a utility class that can b
 
 This class can be used to highlight important messages or call-to-action elements throughout the application.
 
-3\. Abstracting complex styles
+### 3\. Abstracting complex styles
 ------------------------------
 
 The @extend utility can also be used to break down complex styles into smaller classes. This can be useful when you have a set of styles that are used in multiple components or pages, and you want to separate them to improve the code organization and maintainability.
@@ -257,14 +259,14 @@ The page-header class in this example includes complex page header styles such a
 
 ![](https://miro.medium.com/v2/resize:fit:1024/0*C5DKY_dGMQKU6Ot4.png)
 
-Use cases for the `@responsive` utility
+## Use cases for the `@responsive` utility
 ---------------------------------------
 
 The `@responsive` utility is used to add responsive styles to our components. It allows us to define styles that are specific to different screen sizes, such as mobile, tablet, or desktop.
 
 Here are some examples of how you can use the `@responsive` utility in your web application:
 
-1\. Hide an element on smaller screens
+### 1\. Hide an element on smaller screens
 --------------------------------------
 
 You can use the `@responsive` utility to hide an element on smaller screens. For example, you can hide a `button` on screens smaller than 640 pixels like this:
@@ -277,7 +279,7 @@ Press enter or click to view image in full size
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*vIMOPwqMkfQCDDWN.gif)
 
-2\. Adjust font size on larger screens
+### 2\. Adjust font size on larger screens
 --------------------------------------
 
 You can also use the @responsive utility to adjust the font size of an element on larger screens. You can increase the font size of a heading on screens larger than 1024 pixels like this:
@@ -290,7 +292,7 @@ Press enter or click to view image in full size
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*DFlIIPgWB8dy5jaN.gif)
 
-3\. Adjust column layout on different screen sizes
+### 3\. Adjust column layout on different screen sizes
 --------------------------------------------------
 
 You can use the `@responsive` utility to adjust the layout of columns in a grid on different screen sizes. Here's how to change the layout of a two-column grid to a one-column layout on screens smaller than 768 pixels with Tailwind CSS's @responsive:
@@ -304,12 +306,12 @@ Press enter or click to view image in full size
 
 ![](https://miro.medium.com/v2/resize:fit:1400/0*3fjhE6umMAMyNXek.gif)
 
-Use cases for the `@variant` utility
+## Use cases for the `@variant` utility
 ------------------------------------
 
 Here are some examples of how the `@variant` utility can be used in a web application:
 
-1\. Styling buttons with different variants
+### 1\. Styling buttons with different variants
 -------------------------------------------
 
 Buttons are an essential part of any web application, and Tailwind CSS makes it easy to style buttons using the @variant utility. Here's an example:
@@ -323,7 +325,7 @@ In the above example, there are two buttons. The `@variant` utility is used to
 
 ![](https://miro.medium.com/v2/resize:fit:1024/0*0lHUvAbIdN3Ai6I6.png)
 
-2\. Displaying different styles for links
+### 2\. Displaying different styles for links
 -----------------------------------------
 
 Links are another common element in web applications, and they can be styled using the `@variant` utility to provide additional context or feedback. Here's an example:
@@ -336,7 +338,7 @@ In the above example, the `@variant` utility is used to apply a bold `font-we
 
 ![](https://miro.medium.com/v2/resize:fit:960/0*5C6P1yppTEsXvVNh.gif)
 
-3\. Styling form elements based on their state
+### 3\. Styling form elements based on their state
 ----------------------------------------------
 
 Form elements are an essential component of many web applications, and they can be styled with the `@variant` utility to provide feedback to users based on their current state. Here's an illustration:
@@ -350,7 +352,7 @@ When there is an error with the user's input, the `@variant` utility is used t
 
 ![](https://miro.medium.com/v2/resize:fit:1348/0*cz9kp1Ujwyt8q9JU.gif)
 
-Conclusion
+## Conclusion
 ----------
 
 Tailwind CSS is a powerful tool for web designers and developers that offers a wide range of utilities for styling and optimizing websites. The `apply`, `extend`, `variants`, and `responsive` utilities are just a few examples of the many functionalities available within Tailwind CSS. These utilities allow users to easily and efficiently apply styles, extend existing styles, create variants, and design responsive layouts. Whether you are a seasoned web developer or just starting, incorporating these Tailwind CSS utilities into your workflow can greatly improve the design and functionality of your website. You can access [the official Tailwind CSS documentation](https://v1.tailwindcss.com/docs/adding-new-utilities) for further information on these utilities and more.
