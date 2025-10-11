@@ -1,4 +1,4 @@
-![](https://miro.medium.com/v2/resize:fit:1400/1*9bSjsHQFZD_giSLHWx7PKQ.png)
+![](https://miro.medium.com/v2/resize:fit:1400/1*CwaDyYd1vs91hloxBerHAQ.png)
 
 Large Language Models (LLMs) are impressive, but on their own they're limited. The real magic happens when you connect them to tools and give them memory. That's exactly what I set out to do in this project. I created a research assistant. It takes any query and searches the web and Wikipedia. It organizes the results into a clear format. You can save everything to a file to look at later.
 

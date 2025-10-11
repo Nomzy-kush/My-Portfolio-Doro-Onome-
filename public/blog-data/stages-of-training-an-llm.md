@@ -12,9 +12,8 @@ If you ask the model a question now, it might say: "blue quickly onion fire 92xp
 That's not a mistake; the model hasn't learned how language works yet. The model makes noise because it's not trained. It doesn't understand grammar, facts, or logic.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*MiRvrpWcRbnH1DAZWOYrJQ.png)
+![Stage Zero: Random Initialization](https://miro.medium.com/v2/resize:fit:1400/1*6RfYZM5hjDdx9IzwccF2-A.png)
 
-Random Initialization of the LLM
 
 This is the first stage of training an LLM. Everything the model will learn i.e. language structure, reasoning, and knowledge, will come from the next step: pre-training on large datasets.
 
@@ -38,9 +37,8 @@ Sentence: "The early bird catches the worm."\
 Masked: "The ___ bird catches the ___"\
 The model generates "early" and "worm" by using surrounding words.
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*cKLL0ucebC56aUen1syAog.png)
+![Stage One: Pre-training](https://miro.medium.com/v2/resize:fit:1400/1*LuveQ_D5iyuOmUeRMED2yA.jpeg)
 
-Pre-training an LLM
 
 ## Architectures in Pre-training:
 ------------------------------
@@ -54,9 +52,8 @@ During pre-training, the model updates its weights using gradient descent to mak
 By the end of this stage, the model understands grammar, facts, and structure. But it still cannot follow instructions or align with human goals. That comes later with fine-tuning and human feedback.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*MYmm-5T-HBipL7PrHb78BA.png)
+![Architectures in Pre-training](https://miro.medium.com/v2/resize:fit:1400/1*Gt2uafv8NHZMG_ZIlQOcHg.jpeg)
 
-Pre-trained LLM
 
 ## Stage Two: Instruction Fine-Tuning
 ----------------------------------
@@ -74,9 +71,7 @@ This stage makes the model conversational. This enables it to summarize text, an
 The model adjusts its weights to match its outputs to labeled answers through backpropagation. This stage significantly improves its usability in real-world scenarios.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*zWtQHkHqMAg8xdIoRfOqwg.png)
-
-Instruction Fine Tuning
+![Stage Two: Instruction Fine-Tuning](https://miro.medium.com/v2/resize:fit:1400/1*wa8Jc5rLYTZVEfj1y7wY8Q.png)
 
 ## Stage Three: Preference Fine-Tuning (RLHF)
 ------------------------------------------
@@ -90,9 +85,9 @@ Here's how it works:
 -   A reward model is trained based on these choices.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*ED5zRv1n9hn5D6XicMbVNA.png)
+![Multiple Response Choices](https://miro.medium.com/v2/resize:fit:1400/1*ED5zRv1n9hn5D6XicMbVNA.png)
 
-Multiple Response Choices
+
 
 You then update the base LLM with reinforcement learning, often with the Proximal Policy Optimization (PPO) method. This process helps the model align with human values and preferences, even when there is no single correct answer. Over time, the LLM learns to give more helpful, detailed, and polite responses.
 
@@ -101,9 +96,8 @@ You then update the base LLM with reinforcement learning, often with the Proxima
 RLHF is important for model alignment. It helps developers create trained LLMs that work well in customer service and decision-making settings.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*zJds2BOErECPN-OXDVAG8A.png)
+![Stage Three: Preference Fine-Tuning (RLHF)](https://miro.medium.com/v2/resize:fit:1400/1*E6D7tZiZdT1zdryFh6KuBQ.png)
 
-Preference Fine-tuning
 
 ## Stage Four: Reasoning Fine-Tuning
 ---------------------------------
