@@ -46,10 +46,7 @@ On February 21, 2025, Bybit suffered a significant security breach, which result
 
 Investigations revealed that the breach was orchestrated by North Korea's Lazarus Group, a state-sponsored hacking organization known for targeting centralized crypto exchanges. The attackers employed a sophisticated phishing campaign to compromise a developer's machine associated with Safe{Wallet}, the multisig wallet provider that Bybit uses.
 
-
-![](https://miro.medium.com/v2/resize:fit:1400/0*FOP4pVlbMw0bYhEr.png)
-
-[*Source*](https://crypto-economy.com/breaking-bybit-suffers-1-4-billion-hack-in-liquid-staked-eth-and-meth/)
+![Bybit](https://miro.medium.com/v2/resize:fit:800/1*T5F-F8B9BsVD5Yj_fTAW2Q.jpeg)
 
 ### How attackers bypassed existing controls
 ----------------------------------------
@@ -159,7 +156,7 @@ Designing a resilient and secure Web3 infrastructure requires a layered approach
 -   Segment wallets by operational roles to reduce the blast radius of any breach. Isolate treasury wallets and ensure they require the highest level of authentication. Payout wallets should operate under limited withdrawal ceilings. Operational wallets can stay hot, but they must be closely monitored at all times. Using role-based segregation makes sure that if one system gets hacked, the attacker can't reach all the funds.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*WGW95Kd-qhWKfQ58.jpg)
+![Simple principles to build more secure wallets](https://miro.medium.com/v2/resize:fit:1400/1*TRjmlK0FyH4spdacpzld7w.png)
 
 ## Better ways to manage your Web3 keys
 ------------------------------------
@@ -198,17 +195,17 @@ Follow these processes to fully secure your Web3 system:
 Assign access based on job roles, not individuals. This limits overprivileged accounts and makes it easier to track who has access to what. For example, an operations engineer who handles wallet transactions shouldn't have access to treasury or development systems.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*1U7Of789WaArmHez.png)
+![Use Role-Based Access Control (RBAC) to manage permissions](https://miro.medium.com/v2/resize:fit:1400/1*qKpJ8VPx3ZXm9upIZYdvZg.png)
 
 -   Apply the Least Privilege Principle Give each user only the access they need to do their job, nothing more. Constantly review permissions and remove the ones your system no longer needs. The Bybit hack showed how attackers can abuse excessive privileges, even through tricks on the frontend. If your Web3 system keeps access tightly controlled, it can reduce the damage if something goes wrong.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*VF4N_U_xr2z4lHny.png)
+![Apply the Least Privilege Principle](https://miro.medium.com/v2/resize:fit:1400/1*gc1ZOSL_HLKaf2XbjYXWkA.png)
 
 -   Mitigate Insider Threats Track all transaction requests, access events, and key operations with detailed audit logs. Require peer reviews before anyone signs transactions or pushes code to production. Use a separation-of-duties model so no one can carry out high-risk actions alone.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*INknoT8O_q1L5_FD.png)
+![Mitigate Insider Threats](https://miro.medium.com/v2/resize:fit:1400/1*HIiPnsJ8mLgR81WuAuDZiQ.png)
 
 -   Create Incident Response Playbooks Teams need clear playbooks to act fast when something goes wrong. If a wallet shows strange activity, like unexpected transactions or unknown connections, then the team should follow a step-by-step guide. A wallet freeze runbook must explain exactly how to pause activity, lock down access, and stop any more funds from moving. It should also list who must approve each step so nothing happens without the right sign-offs.
 

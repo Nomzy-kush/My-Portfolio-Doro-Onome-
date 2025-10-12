@@ -115,7 +115,7 @@ This method helps the model show its reasoning process. It uses strategies like 
 This approach is called Reinforcement Learning with Verifiable Rewards. It is important for tasks like scientific research, coding, and math reasoning. Techniques like GRPO (Generalized Reward Policy Optimization) are used in this phase to boost performance in complex areas.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/1*J7BZ3pa2h2MyeisjsVr67Q.png)
+![Stage Four: Reasoning Fine-Tuning](https://miro.medium.com/v2/resize:fit:1400/1*JfO8e-NFAkBSW1kprR-bnw.png)
 
 Final Stage of Model Training
 
