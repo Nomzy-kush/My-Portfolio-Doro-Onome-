@@ -215,22 +215,22 @@ Assign access based on job roles, not individuals. This limits overprivileged ac
 -   Set clear steps for handling a breach. Create an escalation matrix that shows who makes key decisions, who handles public communication, and who leads the technical response. Define both on-chain and off-chain roles for emergencies in DAOs and hybrid Web3 organizations. Use pre-approved multi-sig transactions or emergency votes to act quickly when something goes wrong.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*7pFGmVuoTIv7n-Ut.png)
+![](https://miro.medium.com/v2/resize:fit:1400/1*3a-ZpwEq_eucic5i9o29ZA.png)
 
 -   Use On-Chain Analytics for Real-Time Monitoring Set up on-chain monitoring tools to track suspicious activity, like wallet drains, unexpected protocol interactions, or sudden drops in total value locked (TVL). Make sure dashboards send real-time alerts to both technical teams and governance leads.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*4vfn3Q9RcvfUdsuI.png)
+![](https://miro.medium.com/v2/resize:fit:1400/1*X0oYQ5wv8A26_NZZVMh7KA.png)
 
 -   Require Multiple Reviewers for Code Changes Always make sure at least two people review any smart contract update before it goes live. Use version control tools like Git with branch protection rules. These rules block unapproved or unreviewed code from reaching staging or production.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*Zsj1AockKkMijJYH.jpg)
+![Require Multiple Reviewers for Code Changes](https://miro.medium.com/v2/resize:fit:1400/1*NhlSnz8YEzFt8kF8czVdjA.png)
 
 -   Secure CI/CD Pipelines with Guardrails CI/CD pipelines should block unsafe code before it reaches production. Add security checks like static analysis, vulnerability scans, and permission validation at every stage. Automate audits before deployment and require signed approvals. This ensures every contract deployment is secure, traceable, and hard to tamper with.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*iWwnzHt5o_wyZ0mp.jpg)
+![Secure CI/CD Pipelines with Guardrails](https://miro.medium.com/v2/resize:fit:1400/1*EQeOnEH0nEdlqI4z71Oapw.png)
 
 ## Governance and Compliance Considerations
 ----------------------------------------
@@ -247,7 +247,7 @@ On the other hand, corporate entities have clear leadership. These leaders can q
 To bridge this gap, many projects now use hybrid models. In these setups, the community proposes ideas, but a trusted group like a multisig council or security committee has the power to act fast during a crisis. This approach keeps governance transparent while improving emergency response.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*dmZcXQf9qCE_uIwa.png)
+![DAO or Corporate Structures: Who Makes the Security Decisions](https://miro.medium.com/v2/resize:fit:1400/1*SLX7BpQLkaOvgyxGu_eSCQ.png)
 
 ### Build Transparent and Enforceable Security Policies\
 Security policies should not live in internal handbooks. Publish your operational security playbooks, wallet management standards, and incident protocols on public or on-chain governance forums. This allows token holders and contributors to audit, propose, and enforce changes.
@@ -256,7 +256,7 @@ Use smart contracts to encode enforcement, such as automatic freezing of treasur
 
 Press enter or click to view image in full size
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*eh7_xBFbBlA9-g6u.jpg)
+![Build Transparent and Enforceable Security Policies](https://miro.medium.com/v2/resize:fit:1400/1*cmQuK270u9S-N1hyZ9zHCw.png)
 
 ### Understand and Adapt to Regulatory Pressures
 
@@ -271,7 +271,7 @@ MiCA sets new rules for EU-facing projects. Crypto Asset Service Providers (CASP
 **Note**: Global teams must plan for legal overlap. If your protocol runs across borders, expect to comply with multiple legal systems. Design your data flows, wallet access rules, and incident response plans with these regulations in mind.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*DY9roKIoOc3VkQmD.png)
+![Understand and Adapt to Regulatory Pressures](https://miro.medium.com/v2/resize:fit:1400/1*KytH_5JDhECSObMXOqVutA.png)
 
 ## Security Tools for Web3 Teams
 ------------------------------------------
@@ -291,7 +291,7 @@ They reduce human error as they automate treasury disbursements, enforce time lo
 Modern orchestration tools also connect with governance systems and security playbooks. This integration allows teams to freeze wallets or reroute funds immediately during a breach or suspicious activity.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*71hoa-gc0RKS9V2F.png)
+![Secure Wallet Orchestration Platforms](https://miro.medium.com/v2/resize:fit:1400/1*JqRhgovjf4UEaQkM6U8ZMw.png)
 
 ### SIEM Tools Tailored for Web3 Telemetry
 
@@ -302,7 +302,7 @@ These platforms collect logs from smart contracts, validator nodes, wallet inter
 Web3 SIEMs alert security teams to unusual contract activity, suspicious staking behaviors, and unexpected validator reorganizations. This fast detection helps teams respond quickly before damage spreads.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*5AnJnmOw1eSefBqk.jpg)
+![SIEM Tools Tailored for Web3 Telemetry](https://miro.medium.com/v2/resize:fit:1400/1*M29hyeLgdgPEvP0VTFxMkg.png)
 
 ### Smart Contract Scanners and Automated Auditors
 
