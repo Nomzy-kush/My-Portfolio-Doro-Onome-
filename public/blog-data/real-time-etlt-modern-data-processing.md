@@ -8,7 +8,7 @@ ELT (Extract, Load and Transform) is a well-known data architecture technique. I
 
 ETLT (Extract, Transform, Load, and Transfer) adds another layer to the traditional setup. The "transfer" part represents the final step where data is moved in real time to another system. ETLT is crucial for companies aiming to derive valuable insights and take real-time action. In video games, for instance, ETLT can update player stats and leaderboards instantly as they play, which illustrates one of the key processes involved in modern data pipelines.
 
-![Entire ETLT Process](https://miro.medium.com/v2/resize:fit:1400/0*r4aJic10j8oi0-sc.png)
+![What is Real time ETLT?](https://miro.medium.com/v2/resize:fit:1400/1*nAIDp31K47nvRf_0RM4roQ.png)
 
 ## What are the Challenges of real-time ETLT?
 ------------------------------------------

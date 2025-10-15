@@ -170,7 +170,7 @@ Designing a resilient and secure Web3 infrastructure requires a layered approach
 ### Recovery and Backup Strategies
 -   Design backup strategies that never expose private keys or recovery phrases in plain text. Use encrypted backups, hardware devices to store recovery shards, or fully offline (air-gapped) systems. Always require manual checks and approval from multiple trusted parties before any recovery process begins. This prevents unauthorized or rogue access.
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*PIpop62S9NMJnDZW.png)
+![Better ways to manage your Web3 keys](https://miro.medium.com/v2/resize:fit:1400/1*v3LWguVc4rJu6Ac6HeJWSQ.png)
 
 ## More secure decentralized node operations
 -----------------------------------------
@@ -311,7 +311,7 @@ Smart contract teams must no longer deploy untested code. Tools like Slither, My
 In 2025, leading protocols use more than just static analysis. They combine symbolic execution, fuzz testing, and formal verification to strengthen contract reliability. Some teams even run contract twins in forked environments. This approach simulates real-chain behavior and reveals bugs that traditional tests often miss.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*xh25zE3R9rccL4xn.png)
+![Smart Contract Scanners and Automated Auditors](https://miro.medium.com/v2/resize:fit:1400/1*gHGoEV8zMJicU8gmJCsm1w.png)
 
 ### dApp Behavior Anomaly Detectors
 
@@ -320,7 +320,7 @@ Security doesn't stop at contract audits. Decentralized apps (dApps) can behave 
 These platforms detect transaction flow anomalies, phishing redirections, and compromised frontends. They can block dangerous functions in real time, alert teams if wallet-draining signatures are triggered, and flag suspicious session key reuse or contract impersonation.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*XU621oAdhQo_WHhq.png)
+![dApp Behavior Anomaly Detectors](https://miro.medium.com/v2/resize:fit:1400/1*-xgRSG0-UAavi8BuLQqaRQ.png)
 
 ### On-Chain Monitoring and Alerting Solutions
 
@@ -335,7 +335,7 @@ Halborn's Watchtower Suite adds advanced features like exploit path simulations,
 These solutions feed directly into SecOps dashboards, which allow security teams to correlate on-chain signals with operational telemetry and governance actions.
 
 
-![](https://miro.medium.com/v2/resize:fit:1400/0*7Rgy3Ee3gLZ10uca.png)
+![On-Chain Monitoring and Alerting Solutions](https://miro.medium.com/v2/resize:fit:1400/1*f_1rYk6tG9eBZpIIPJVK0Q.png)
 
 on-chain monitoring and alerts
 
