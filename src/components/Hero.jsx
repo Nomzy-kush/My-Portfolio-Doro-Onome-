@@ -58,10 +58,10 @@ const Hero = () => {
           <a href="https://github.com/Nomzy-kush" target="_blank" rel="noreferrer">
             <FaGithub size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
           </a>
-          <a href="https://linkedin.com/in/doro-onome-193205208/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/churchill-doro-onome/" target="_blank" rel="noreferrer">
             <FaLinkedin size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
           </a>
-          <a href="https://medium.com/@nomzykush" target="_blank" rel="noreferrer">
+          <a href="https://medium.com/@churchilldoro" target="_blank" rel="noreferrer">
             <FaMedium size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
           </a>
         </div>
