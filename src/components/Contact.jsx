@@ -5,6 +5,8 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { send, sendHover } from '../assets';
+import { Mail } from 'lucide-react'; // optional icon library (if available)
+
 
 const Contact = () => {
   const formRef = useRef();
@@ -29,27 +31,22 @@ const Contact = () => {
     //click on create a new template then click on save.
     emailjs
       .send(
-        'serviceID', // paste your ServiceID here (you'll get one when your service is created).
-        'templateID', // paste your TemplateID here (you'll find it under email templates).
+        'serviceID',
+        'templateID',
         {
           from_name: form.name,
-          to_name: 'Doro Onome', // put your name here.
+          to_name: 'Doro Onome',
           from_email: form.email,
-          to_email: 'youremail@gmail.com', //put your email here.
+          to_email: 'nomzykush@gmail.com',
           message: form.message,
         },
-        'yourpublickey' //paste your Public Key here. You'll get it in your profile section.
+        'yourpublickey'
       )
       .then(
         () => {
           setLoading(false);
           alert('Thank you. I will get back to you as soon as possible.');
-
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-          });
+          setForm({ name: '', email: '', message: '' });
         },
         (error) => {
           setLoading(false);
@@ -61,43 +58,50 @@ const Contact = () => {
 
   return (
     <div
-      className="-mt-[8rem] xl:flex-row flex-col-reverse 
-      flex gap-10 overflow-hidden">
+      className="-mt-[8rem] xl:flex-row flex-col-reverse flex gap-10 overflow-hidden"
+    >
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] bg-jet p-8 rounded-2xl">
+        className="flex-[0.75] bg-jet p-8 rounded-2xl"
+      >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
 
-        <a
-  href="mailto:nomzykush@gmail.com?subject=Message%20from%20Portfolio&body=Hello%20Doro,%0A%0A"
-  className="live-demo flex justify-center sm:gap-4 
-  gap-3 sm:text-[20px] text-[16px] text-timberWolf 
-  font-bold font-beckman items-center py-5
-  whitespace-nowrap sm:w-[130px] sm:h-[50px] 
-  w-[100px] h-[45px] rounded-[10px] bg-night 
-  hover:bg-battleGray hover:text-eerieBlack 
-  transition duration-[0.2s] ease-in-out"
-  onMouseOver={() => {
-    document
-      .querySelector('.contact-btn')
-      .setAttribute('src', sendHover);
-  }}
-  onMouseOut={() => {
-    document.querySelector('.contact-btn').setAttribute('src', send);
-  }}
->
-  {loading ? 'Sending' : 'Send'}
-  <img
-    src={send}
-    alt="send"
-    className="contact-btn sm:w-[26px] sm:h-[26px] 
-    w-[23px] h-[23px] object-contain"
-  />
-</a>
+        {/* ✅ Email Display Section */}
+        <div className="flex items-center gap-3 mt-6 mb-8 text-timberWolf">
+          <Mail className="w-5 h-5" />
+          <a
+            href="mailto:nomzykush@gmail.com"
+            className="text-[16px] sm:text-[18px] font-medium hover:text-battleGray transition"
+          >
+            nomzykush@gmail.com
+          </a>
+        </div>
 
+        {/* ✅ Email Send Button */}
+        <a
+          href="mailto:nomzykush@gmail.com?subject=Message%20from%20Portfolio&body=Hello%20Onome,%0A%0A"
+          className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] 
+          text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap 
+          sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night 
+          hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out"
+          onMouseOver={() => {
+            document.querySelector('.contact-btn').setAttribute('src', sendHover);
+          }}
+          onMouseOut={() => {
+            document.querySelector('.contact-btn').setAttribute('src', send);
+          }}
+        >
+          {loading ? 'Sending' : 'Send'}
+          <img
+            src={send}
+            alt="send"
+            className="contact-btn sm:w-[26px] sm:h-[26px] w-[23px] h-[23px] object-contain"
+          />
+        </a>
       </motion.div>
     </div>
+
   );
 };
 

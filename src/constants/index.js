@@ -49,6 +49,7 @@ export const navLinks = [
   { id: 'blog', title: 'Blog' },
   { id: 'projects', title: 'Projects' },
   { id: 'publications', title: 'Publications' },
+  { id: 'contact', title: 'Contact' },
 ];
 
 const services = [
