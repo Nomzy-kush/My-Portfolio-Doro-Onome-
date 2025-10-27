@@ -1,8 +1,9 @@
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import React, { useEffect, useState, useRef } from 'react';
-import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
-import { bwmap, worldmap, wavinghand } from '../assets';
-import { styles } from '../styles';
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState, useRef } from "react";
+import { FaGithub, FaLinkedin, FaXTwitter, FaWhatsapp } from "react-icons/fa6";
+import { HiOutlineMail } from "react-icons/hi";
+import { bwmap, worldmap, wavinghand } from "../assets";
+import { styles } from "../styles";
 
 const Hero = () => {
   const names = [
@@ -20,7 +21,10 @@ const Hero = () => {
   }, []);
 
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"],
+  });
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 180]);
 
   return (
@@ -40,10 +44,10 @@ const Hero = () => {
           alt="mobile map"
           className="w-full h-full object-cover sm:hidden mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-[#0b1120]/80" /> {/* subtle tint overlay */}
+        <div className="absolute inset-0 bg-[#0b1120]/80" />
       </motion.div>
 
-      {/* Waving hand (on small screens it appears first) */}
+      {/* Waving hand + Social icons */}
       <div className="z-10 flex flex-col items-center justify-center sm:order-2 order-1 mb-6 sm:mb-0 mt-6 sm:mt-0 ml-6 sm:ml-0">
         <motion.div
           animate={{ rotate: [0, 15, 0], y: [0, -10, 0] }}
@@ -53,16 +57,62 @@ const Hero = () => {
           <img src={wavinghand} alt="Waving Hand" className="w-full h-full" />
         </motion.div>
 
-        {/* Social icons */}
+        {/* Social Icons */}
         <div className="flex gap-5">
-          <a href="https://github.com/Nomzy-kush" target="_blank" rel="noreferrer">
-            <FaGithub size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/doro-onome"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin
+              size={32}
+              className="text-gray-300 hover:text-[#06AED5] transition-colors"
+            />
           </a>
-          <a href="https://www.linkedin.com/in/churchill-doro-onome/" target="_blank" rel="noreferrer">
-            <FaLinkedin size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
+
+          {/* Mail */}
+          <a href="mailto:nomzykush@gmail.com">
+            <HiOutlineMail
+              size={32}
+              className="text-gray-300 hover:text-[#06AED5] transition-colors"
+            />
           </a>
-          <a href="https://medium.com/@churchilldoro" target="_blank" rel="noreferrer">
-            <FaMedium size={32} className="text-gray-300 hover:text-[#06AED5] transition-colors" />
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/Nomzy-kush"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub
+              size={32}
+              className="text-gray-300 hover:text-[#06AED5] transition-colors"
+            />
+          </a>
+
+          {/* X (Twitter) */}
+          <a
+            href="https://x.com/DoroChurchill"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaXTwitter
+              size={32}
+              className="text-gray-300 hover:text-[#06AED5] transition-colors"
+            />
+          </a>
+
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/2349015618845"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaWhatsapp
+              size={32}
+              className="text-gray-300 hover:text-[#06AED5] transition-colors"
+            />
           </a>
         </div>
       </div>
@@ -70,18 +120,18 @@ const Hero = () => {
       {/* Name + subtitle */}
       <div className="z-10 text-left sm:text-left sm:order-1 order-2 px-6">
         <h1 className={`${styles.heroHeadText} uppercase`}>
-          Hi, I’m{' '}
+          Hi, I’m{" "}
           <AnimatePresence mode="wait">
             <motion.span
               key={names[index].text}
               initial={{ rotateY: 360, opacity: 0 }}
               animate={{ rotateY: 0, opacity: 1 }}
               exit={{ rotateY: -360, opacity: 0 }}
-              transition={{ duration: 0.8, ease: 'easeInOut' }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
               style={{
                 background: `linear-gradient(90deg, ${names[index].color}, white, ${names[index].color})`,
-                WebkitBackgroundClip: 'text',
-                color: 'transparent',
+                WebkitBackgroundClip: "text",
+                color: "transparent",
                 textShadow: `0 0 20px ${names[index].color}50`,
               }}
               className="font-extrabold text-5xl sm:text-7xl tracking-wide"
@@ -91,7 +141,8 @@ const Hero = () => {
           </AnimatePresence>
         </h1>
         <p className="text-gray-300 mt-4 text-lg sm:text-xl font-medium font-mova">
-          Frontend Developer and <span className="text-[#06AED5]">Technical Writer</span>.
+          Frontend Developer and{" "}
+          <span className="text-[#06AED5]">Technical Writer</span>.
         </p>
       </div>
     </section>
