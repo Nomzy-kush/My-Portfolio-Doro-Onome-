@@ -78,6 +78,23 @@ export const blogPosts = [
     file: "building-ai-research-assistant.md",
     readingTime: calculateReadingTime(`In this article, we explore how to create an AI research assistant using Hugging Face Transformers, LangChain for chaining LLM calls, and Python. You'll learn to fetch, summarize, and interact with research papers efficiently. Step-by-step code examples are included to help you build your own assistant.`),
   },
+  {
+    slug: "how-i-create-sop-docs-that-teams-actually-use",
+    title: "How I Create SOP Docs that Teams Actually Use",
+    date: "2025-12-02",
+    tags: ["sop", "documentation", "processes", "team management"],
+    description: "Learn my step-by-step approach to writing SOPs that teams will actually follow, avoid common mistakes, and ensure consistency.",
+    file: "how-i-create-sop-docs-that-teams-actually-use.md",
+    readingTime: calculateReadingTime(`
+      "Do I really need an SOP for this?"
+      "Why do my teammates ignore the SOPs I already wrote?"
+      "Why do people still ask me questions that the SOP already answers?"
+
+      These are the questions most teams quietly ask themselves.
+      And they are the same questions that pushed me to change how I create SOPs.
+    `),
+  },
+  
     
   ];
   

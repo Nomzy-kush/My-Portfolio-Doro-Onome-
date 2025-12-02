@@ -65,6 +65,7 @@ import katsu from './projects/katsu-logo.jpg'
 import talentcode from './projects/talentcode.jpeg'
 import tiedy from './icons/tiedy.png'
 import tekkyguide from './icons/tekkyguide.jpeg'
+import sopdoc from './personal/sop-example.jpeg'
 
 export {
   bwmap,
@@ -127,5 +128,6 @@ export {
   katsu,
   talentcode,
   tiedy,
-  tekkyguide
+  tekkyguide,
+  sopdoc
 };
