@@ -94,6 +94,23 @@ export const blogPosts = [
       And they are the same questions that pushed me to change how I create SOPs.
     `),
   },
+
+  {
+    slug: "how-to-create-api-documentation-in-postman",
+    title: "How to Create API Documentation in Postman (Step-by-Step Guide)",
+    date: "2025-12-30",
+    tags: ["api", "documentation", "postman", "developer-tools"],
+    description:
+      "A practical, step-by-step guide to creating clear, usable API documentation in Postman — from organizing collections to publishing shareable docs developers actually understand.",
+    file: "how-to-create-api-documentation-in-postman.md",
+    readingTime: calculateReadingTime(`
+      Creating good API documentation is just as important as building the API itself.
+      In this guide, we walk through how to use Postman to document APIs step by step —
+      covering collections, requests, examples, descriptions, authentication details,
+      versioning, and how to publish and maintain developer-friendly documentation.
+    `),
+  },
+  
   
     
   ];
