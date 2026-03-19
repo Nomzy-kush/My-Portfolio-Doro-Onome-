@@ -111,7 +111,21 @@ export const blogPosts = [
     `),
   },
   
-  
+  {
+    slug: "how-to-create-api-documentation-with-swagger-2026",
+    title: "How to Create API Documentation with Swagger in 2026 (Step-by-Step Guide)",
+    date: "2026-03-19",
+    tags: ["api", "documentation", "swagger", "openapi", "developer-tools"],
+    description:
+      "Learn how to create clear, interactive API documentation using Swagger (OpenAPI) in 2026 — from defining your schema to generating and publishing developer-friendly docs.",
+    file: "how-to-create-api-documentation-with-swagger-2026.md",
+    readingTime: calculateReadingTime(`
+      Good API documentation is critical for developer adoption, and Swagger remains one of the most powerful tools for building it.
+      In this guide, we walk through how to create API documentation using Swagger (OpenAPI) in 2026 — covering schema design,
+      endpoint definitions, request/response structures, authentication, and how to generate interactive documentation with Swagger UI.
+      You’ll also learn best practices for structuring your API docs so developers can easily understand and integrate with your API.
+    `),
+  },
     
   ];
   
