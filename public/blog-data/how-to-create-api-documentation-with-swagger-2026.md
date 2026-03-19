@@ -35,6 +35,7 @@ You will use Express to create the API server, `swagger-ui-express` will help 
 
 Create a `server.js` file and paste the following code:
 
+```js
 const express = require("express");\
 const swaggerUi = require("swagger-ui-express");\
 const YAML = require("yamljs");\
@@ -53,6 +54,7 @@ app.get("/", (req, res) => {\
 app.listen(PORT, () => {\
   console.log(`API server running at http://localhost:${PORT}`);\
 });
+```
 
 In the code above, we created a simple Node.js API server with Express. We are loading an API definition from a YAML file and using Swagger UI to render interactive API documentation in your browser. When you visit `/api-docs`, Swagger should display all your API endpoints with their request methods along with the important request parameters that you will specify in the YAML file later.
 
@@ -62,6 +64,7 @@ Create a Swagger documentation file in your root folder. You can name it `swagg
 
 Here's what it might look like:
 
+```yml
 openapi: 3.0.0\
 info:\
   title: Sample API\
@@ -81,6 +84,7 @@ paths:\
               schema:\
                 type: string\
                 example: Welcome to the API server!
+```
 
 The code above describes how your API should work in a structured, machine-readable format. It tells Swagger the base URL of your API, which endpoints exist, what HTTP methods they support, and what responses to expect. So Swagger can use this file to generate the API documentation and testing tools for you.
 
@@ -88,8 +92,10 @@ The code above describes how your API should work in a structured, machine-reada
 
 Start your server and run the code with the following commands:
 
+```bash
 npm run start\
 node server.js
+```
 
 This is what you will see this on your local browser at this point
 
@@ -137,6 +143,7 @@ Follow the steps below to learn how to create CRUD API servers and list them on 
 
 Update your `server.js` file to include CRUD operations. For the sake of this article, we will be using very simple set of data for demonstration.
 
+```js
 const express = require("express");\
 const swaggerUi = require("swagger-ui-express");\
 const swaggerJsdoc = require("swagger-jsdoc");
@@ -146,6 +153,7 @@ app.use(express.json());
 
 let items = [];\
 let idCounter = 1;
+```
 
 The code above is a simple API server with two variables defined. `items` will store the sample data in memory while `idCounter` will help assign a unique id to each item.
 
@@ -153,6 +161,7 @@ The code above is a simple API server with two variables defined. `items` will
 
 Now you add your first CRUD operation. This endpoint lets you create a new item.
 
+```
 app.post("/items", (req, res) => {\
   const item = {\
     id: idCounter++,\
@@ -162,11 +171,12 @@ app.post("/items", (req, res) => {\
   items.push(item);\
   res.status(201).json(item);\
 });
+```
 
 This endpoint reads data from the request body, assigns a unique ID and stores the item in memory. This is your Create operation in CRUD.
 
 You can document this endpoint correspondingly in your `swagger.yaml` file. Here's how;
-
+```yml
 /items:\
   post:\
     summary: Create a new item\
@@ -183,21 +193,24 @@ You can document this endpoint correspondingly in your `swagger.yaml` file. He
           application/json:\
             schema:\
               $ref: "#/components/schemas/Item"
-
+```
 This step gives Swagger the exact details it needs about the API endpoint you just created, so people can test it easily. `requestBody` shows Swagger what data the API expects while `responses` explain what the API returns. Swagger uses this information to generate form inputs in the Swagger UI. So now you can create items directly from the browser.
 
 ### Step 3: Create the GET Endpoint (Read All)
 
 This is how to setup an endpoint to retrieve all items in memory.
 
+```js
 app.get("/items", (req, res) => {\
   res.json(items);\
 });
+```
 
 This endpoint returns all stored items. You use it when you want to read existing data without modifying anything
 
 Here's how to document it in your `swagger.yaml` file:
 
+```yml
 /items:\
   get:\
     summary: Get all items\
@@ -210,11 +223,13 @@ Here's how to document it in your `swagger.yaml` file:
               type: array\
               items:\
                 $ref: "#/components/schemas/Item"
+```
 
 ### Step 4: Create the GET Endpoint by ID (Read One)
 
 You can allow users to fetch a single item using its ID. Here's how;
 
+```js
 app.get("/items/:id", (req, res) => {\
   const item = items.find(\
     (i) => i.id === Number(req.params.id)\
@@ -226,11 +241,13 @@ app.get("/items/:id", (req, res) => {\
 
   res.json(item);\
 });
+```
 
 This endpoint introduces path parameters, basic error handling, and a clear response when data does not exist. Swagger will later document this parameter automatically.
 
 Here's how to document it in your `swagger.yaml` file:
 
+```yml
 /items/{id}:\
   get:\
     summary: Get item by ID\
@@ -249,11 +266,13 @@ Here's how to document it in your `swagger.yaml` file:
               $ref: "#/components/schemas/Item"\
       "404":\
         description: Item not found
+```
 
 ### Step 5: Create the PUT Endpoint (Update)
 
 Now you can add the Update operation.
 
+```js
 app.put("/items/:id", (req, res) => {\
   const item = items.find(\
     (i) => i.id === Number(req.params.id)\
@@ -266,11 +285,13 @@ app.put("/items/:id", (req, res) => {\
   item.name = req.body.name;\
   res.json(item);\
 });
+```
 
 This endpoint finds an existing item, updates its values, and returns the updated resource. This completes the Update part of CRUD.
 
 Here's how you can document it in your `swagger.yaml` file.
 
+```yml
 put:\
   summary: Update item by ID\
   parameters:\
@@ -294,6 +315,7 @@ put:\
             $ref: "#/components/schemas/Item"\
     "404":\
       description: Item not found
+```
 
 If you document it like this, you will be able to enter the item's id, update the request body, and send the update request right there on the Swagger UI.
 
@@ -301,6 +323,7 @@ If you document it like this, you will be able to enter the item's id, update th
 
 You can also allow users to remove or delete data.
 
+```js
 app.delete("/items/:id", (req, res) => {\
   const index = items.findIndex(\
     (i) => i.id === Number(req.params.id)\
@@ -313,11 +336,13 @@ app.delete("/items/:id", (req, res) => {\
   items.splice(index, 1);\
   res.status(204).send();\
 });
+```
 
 This endpoint deletes an item by ID and returns a `204 No Content Response` when successful. Now you have a complete CRUD API server.
 
 Here's how to document a `DELETE` endpoint on Swagger:
 
+```yml
 delete:\
   summary: Delete item by ID\
   parameters:\
@@ -331,12 +356,15 @@ delete:\
       description: Item deleted\
     "404":\
       description: Item not found
+```
 
 ### Step 7: Run your Server
 
 Run your server with the following command:
 
+```bash
 node server.js
+```
 
 When you navigate to the `/api-docs` route, you should see your API endpoints listed on Swagger like this:
 
@@ -371,6 +399,7 @@ Press enter or click to view image in full size
 
 The response structure consists of what the cURL version of the API request will look like
 
+```bash
 curl -X 'POST' \\
   'http://localhost:2000/items' \\
   -H 'accept: application/json' \\
@@ -378,6 +407,7 @@ curl -X 'POST' \\
   -d '{\
   "name": "balon dorgu"\
 }'
+```
 
 You can actually copy and paste this in your terminal and you will get the same response Swagger gives you, which is the new name we created.
 
@@ -478,6 +508,7 @@ First, you need to add a small middleware to the API server. This middleware che
 
 Here's the middleware:
 
+```js
 const API_KEY = "my-secret-api-key";
 
 const apiKeyAuth = (req, res, next) => {\
@@ -489,6 +520,7 @@ const apiKeyAuth = (req, res, next) => {\
 
   next();\
 };
+```
 
 The code above checks whether the request includes a valid API key. If you send the request with a wrong API key or without a key at all, the server will a respond with a `401` unauthorized error.
 
@@ -497,6 +529,7 @@ The code above checks whether the request includes a valid API key. If you send 
 Apply the auth middleware to the CRUD endpoints.
 
 Here's how:\
+```js
 app.get("/", (req, res) => {\
   res.send("Welcome to the API server!");\
 });
@@ -539,6 +572,7 @@ app.delete("/items/:id", apiKeyAuth, (req, res) => {\
   items.splice(index, 1);\
   res.status(204).send();\
 });
+```
 
 In the code above, we add the `apiKeyAuth` middleware to the CRUD routes. Every request to these endpoints must now include a valid API key. The server will respond with a `401` unauthorized error if you send a request to these endpoints without an API key or an incorrect one.
 
@@ -546,12 +580,14 @@ In the code above, we add the `apiKeyAuth` middleware to the CRUD routes. Ever
 
 Swagger needs to understand how you have set the authentication for the APIs. Add this under components in your `swagger.yaml` file.
 
+```yml
 components:\
   securitySchemes:\
     ApiKeyAuth:\
       type: apiKey\
       in: header\
       name: x-api-key
+```
 
 The code above tells Swagger that the authentication method uses an API key, that the key exists in the request header, and the header name is `x-api-key`
 
@@ -561,13 +597,16 @@ At this point, the server already enforces authentication. Now you need to tell 
 
 If all your API endpoints require an API key, you can document them in your `swagger.yaml` file
 
+```yml
 security:\
   - ApiKeyAuth: []
+```
 
 This single block tells Swagger that all API endpoints require authentication.
 
 Sometimes, you want public endpoints and protected endpoints in the same API. In that case, you can apply authentication only to specific endpoints like this:
 
+```yml
 /items:\
   get:\
     security:\
@@ -576,6 +615,7 @@ Sometimes, you want public endpoints and protected endpoints in the same API. In
     responses:\
       "200":\
         description: Successful response
+```
 
 Step 5: Test the Authentication on Swagger
 ------------------------------------------
