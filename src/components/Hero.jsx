@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState, useRef } from "react";
-import { FaGithub, FaLinkedin, FaXTwitter, FaWhatsapp } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import { FaMedium } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi";
 import { bwmap, worldmap, wavinghand } from "../assets";
 import { styles } from "../styles";
@@ -91,17 +92,17 @@ const Hero = () => {
             />
           </a>
 
-          {/* X (Twitter) */}
-          <a
-            href="https://x.com/DoroChurchill"
+          {/* Medium */}
+            <a
+            href="https://medium.com/@churchilldoro"
             target="_blank"
             rel="noreferrer"
-          >
-            <FaXTwitter
+            >
+            <FaMedium
               size={32}
               className="text-gray-300 hover:text-[#06AED5] transition-colors"
             />
-          </a>
+            </a>
 
           {/* WhatsApp */}
           <a
